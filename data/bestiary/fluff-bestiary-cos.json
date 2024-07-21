@@ -1126,7 +1126,7 @@
 											"name": "Screams of the Dead",
 											"type": "entries",
 											"entries": [
-												"So dreadful a creature is Rahadin that anyone who stands within 10 feet of him can hear the howling screams of the countless men and women he has killed in his lifetime. Rahadin can't hear them, nor would he be haunted by them if he could. The only thing he cares about is Strahd von Zarovich, for whom he would gladly give his life."
+												"So dreadful a creature is Rahadin that anyone who stands within {@imperial 10 feet} of him can hear the howling screams of the countless men and women he has killed in his lifetime. Rahadin can't hear them, nor would he be haunted by them if he could. The only thing he cares about is Strahd von Zarovich, for whom he would gladly give his life."
 											]
 										}
 									]
@@ -1506,7 +1506,7 @@
 								{
 									"type": "entries",
 									"entries": [
-										"Blights (as described in the Monster Manual) are evil, ambulatory plant creatures, and a tree blight is a particularly enormous variety. It looks like a dead tree or treant, 30 feet tall, with spongy wooden flesh, thorny branches, and rubbery roots that trail behind it. It has blood for sap and is so saturated with blood that it doesn't catch fire easily.",
+										"Blights (as described in the Monster Manual) are evil, ambulatory plant creatures, and a tree blight is a particularly enormous variety. It looks like a dead tree or treant, {@imperial 30 feet} tall, with spongy wooden flesh, thorny branches, and rubbery roots that trail behind it. It has blood for sap and is so saturated with blood that it doesn't catch fire easily.",
 										{
 											"name": "Vicious Carnivore",
 											"type": "entries",

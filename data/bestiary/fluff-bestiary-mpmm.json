@@ -269,7 +269,7 @@
 					"type": "entries",
 					"entries": [
 						"An annis hag can pull out one of their iron teeth or nails and spend 1 minute shaping and polishing it into the form of a coin, a ring, or a tiny mirror.",
-						"Thereafter, any creature that holds this iron token can have a whispered conversation with the hag, provided the creature and the hag are within 10 miles of each other. When the hag speaks through the token, the holder can hear the hag's whisper but not any other sounds at the hag's location. Similarly, the hag can hear the holder of the token but not the noise around it.",
+						"Thereafter, any creature that holds this iron token can have a whispered conversation with the hag, provided the creature and the hag are within {@imperial 10 miles} of each other. When the hag speaks through the token, the holder can hear the hag's whisper but not any other sounds at the hag's location. Similarly, the hag can hear the holder of the token but not the noise around it.",
 						"A hag can have up to three iron tokens active at one time. As an action, the hag can discern the direction and approximate distance to those active tokens. The hag can deactivate any of those tokens at any distance (no action required), whereupon the token retains its current form but loses its magic."
 					]
 				}
@@ -1441,7 +1441,7 @@
 										],
 										[
 											"2",
-											"{@b Sensors.} The range of the clockwork's {@sense darkvision} increases by 60 feet, and it gains proficiency in {@skill Perception} if it lacks that proficiency."
+											"{@b Sensors.} The range of the clockwork's {@sense darkvision} increases by {@imperial 60 feet}, and it gains proficiency in {@skill Perception} if it lacks that proficiency."
 										],
 										[
 											"3",
@@ -1449,7 +1449,7 @@
 										],
 										[
 											"4",
-											"{@b Increased Speed.} The clockwork's speed increases by 10 feet."
+											"{@b Increased Speed.} The clockwork's speed increases by {@imperial 10 feet}."
 										],
 										[
 											"5",
@@ -1465,7 +1465,7 @@
 										],
 										[
 											"8",
-											"{@b Suction.} The clockwork gains a climbing speed of 30 feet."
+											"{@b Suction.} The clockwork gains a climbing speed of {@imperial 30 feet}."
 										],
 										[
 											"9",
@@ -1473,7 +1473,7 @@
 										],
 										[
 											"10",
-											"{@b Water Propulsion.} The clockwork gains a swimming speed of 30 feet."
+											"{@b Water Propulsion.} The clockwork gains a swimming speed of {@imperial 30 feet}."
 										]
 									]
 								},
@@ -1503,7 +1503,7 @@
 										],
 										[
 											"4",
-											"{@b Imprinting Loop.} Roll a {@dice d6} at the start of the clock work's turn. If you roll a 1, the clockwork mistakes one creature it can see within 30 feet for its creator. The clockwork won't willingly harm that creature for 1 minute or until that creature attacks or dam ages it."
+											"{@b Imprinting Loop.} Roll a {@dice d6} at the start of the clock work's turn. If you roll a 1, the clockwork mistakes one creature it can see within {@imperial 30 feet} for its creator. The clockwork won't willingly harm that creature for 1 minute or until that creature attacks or dam ages it."
 										],
 										[
 											"5",
@@ -1519,7 +1519,7 @@
 										],
 										[
 											"8",
-											"{@b Rusty Gears.} The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet."
+											"{@b Rusty Gears.} The clockwork has disadvantage on initiative rolls, and its speed decreases by {@imperial 10 feet}."
 										]
 									]
 								}
@@ -2120,7 +2120,7 @@
 					"type": "section",
 					"name": "Dolphins",
 					"entries": [
-						"Dolphins are clever, social marine mammals that feed on small fish and squid. An adult specimen is between 5 and 6 feet long."
+						"Dolphins are clever, social marine mammals that feed on small fish and squid. An adult specimen is between 5 and {@imperial 6 feet} long."
 					]
 				}
 			]
@@ -2953,7 +2953,7 @@
 			"entries": [
 				"Fraz-Urb'luu is the Prince of {@skill Deception} and Demon Lord of Illusions. He uses every trick, every ounce of demonic cunning, to manipulate his enemies\u2014mortal and Fiend alike\u2014to do his will. Fraz-Urb'luu can create dreamlands and mind-bending fantasies able to deceive the most discerning foes.",
 				"Once imprisoned for centuries below Castle Greyhawk on the world of Oerth, Fraz-Urb'luu has slowly rebuilt his power in the Abyss. He seeks the pieces of the legendary {@item staff of power} taken from him by those who imprisoned him and commands his servants to do likewise.",
-				"The Prince of {@skill Deception}'s true form is like that of a great gargoyle, some 12 feet tall, with an extended, muscular neck; a smiling face framed by long, pointed ears and lank, dark hair; and bat-like wings are furled against his powerful shoulders. He can assume other forms, however, from the hideous to the beautiful.",
+				"The Prince of {@skill Deception}'s true form is like that of a great gargoyle, some {@imperial 12 feet} tall, with an extended, muscular neck; a smiling face framed by long, pointed ears and lank, dark hair; and bat-like wings are furled against his powerful shoulders. He can assume other forms, however, from the hideous to the beautiful.",
 				"Many of the cultists of Fraz-Urb'luu aren't even aware they serve the Prince of {@skill Deception}, believing their master is a beneficent being and granter of wishes, some lost god or Celestial, or even another Fiend. Fraz-Urb'luu wears all these masks and more. He particularly delights in aiding demon-hunters against his demonic adversaries, driving the hunters to greater and greater atrocities in the name of their cause, only to eventually reveal his true nature and claim their souls as his own.",
 				{
 					"name": "Cultists of Fraz-Urb'luu",
@@ -3046,7 +3046,7 @@
 			"name": "Gauth",
 			"source": "MPMM",
 			"entries": [
-				"A gauth is a hungry, tyrannical creature similar to a beholder that eats magic and tries to exact tribute from anything weaker than itself. Its body is about 4 feet in diameter, with six eyestalks, a central eye (sometimes surrounded by multiple smaller eyes), and four small grasping tentacles near its mouth. It has color and texture variations similar to a true beholder.",
+				"A gauth is a hungry, tyrannical creature similar to a beholder that eats magic and tries to exact tribute from anything weaker than itself. Its body is about {@imperial 4 feet} in diameter, with six eyestalks, a central eye (sometimes surrounded by multiple smaller eyes), and four small grasping tentacles near its mouth. It has color and texture variations similar to a true beholder.",
 				"A gauth can survive on meat but prefers to sustain itself with power drained from magic objects. If starved of magic for several weeks, it is forced back to its home plane, so it constantly seeks new items to drain. A gauth might employ creatures to bring it items that can provide it with sustenance.",
 				"When the ritual to summon a spectator goes wrong, a gauth might push itself through the flawed connection, arriving immediately or several minutes later. It might present itself as a beholder to ignorant creatures in an attempt to intimidate them, or as a spectator to its summoner in order to drain magic items it is expected to guard.",
 				"A {@creature beholder} usually drives away or kills any gauths that enter its territory, but it might choose to force them to serve it as lieutenants. Gauths are less xenophobic than beholders, so they might form small clusters and work together, though they're just as likely to ignore each other entirely."
@@ -3163,8 +3163,8 @@
 					"name": "Gunpowder by the Keg",
 					"type": "entries",
 					"entries": [
-						"In addition to their personal gunpowder weapons, giff ships and mercenary companies carry spare gunpowder in kegs. In an emergency, or if a large explosion is needed, a whole keg can be detonated. A giff lights the fuse on the keg and can then throw the keg up to 15 feet as part of the same action. The keg explodes at the start of the giff's next turn. Each creature within 20 feet of the exploding keg must make a {@dc 12} Dexterity saving throw. On a failed save, a creature takes 24 ({@damage 7d6}) fire damage and is knocked {@condition prone}. On a successful save, a creature takes half as much damage and isn't knocked {@condition prone}.",
-						"Every other keg of gunpowder within 20 feet of an exploding keg has a {@chance 50|50 percent} chance of also exploding. Check each keg only once per turn, no matter how many other kegs explode around it."
+						"In addition to their personal gunpowder weapons, giff ships and mercenary companies carry spare gunpowder in kegs. In an emergency, or if a large explosion is needed, a whole keg can be detonated. A giff lights the fuse on the keg and can then throw the keg up to {@imperial 15 feet} as part of the same action. The keg explodes at the start of the giff's next turn. Each creature within {@imperial 20 feet} of the exploding keg must make a {@dc 12} Dexterity saving throw. On a failed save, a creature takes 24 ({@damage 7d6}) fire damage and is knocked {@condition prone}. On a successful save, a creature takes half as much damage and isn't knocked {@condition prone}.",
+						"Every other keg of gunpowder within {@imperial 20 feet} of an exploding keg has a {@chance 50|50 percent} chance of also exploding. Check each keg only once per turn, no matter how many other kegs explode around it."
 					]
 				}
 			],
@@ -4620,7 +4620,7 @@
 			"name": "Molydeus",
 			"source": "MPMM",
 			"entries": [
-				"The fearsome molydeus speaks for the demon lord it serves and enforces its master's will. This demon is 12 feet tall, and its bipedal body has a slavering wolfs head and a fanged serpent's head. Its demon lord can speak and see through the serpent head; this master also uses the molydeus to guard treasures, slay foes, and terrify troops into obedience.",
+				"The fearsome molydeus speaks for the demon lord it serves and enforces its master's will. This demon is {@imperial 12 feet} tall, and its bipedal body has a slavering wolfs head and a fanged serpent's head. Its demon lord can speak and see through the serpent head; this master also uses the molydeus to guard treasures, slay foes, and terrify troops into obedience.",
 				"A molydeus's demon lord bestows on it a powerful weapon that dissolves if the molydeus dies. The weapon's form varies depending on the creator, but that doesn't affect the weapon's capabilities."
 			],
 			"images": [
@@ -4917,7 +4917,7 @@
 					"name": "Nilbogism",
 					"type": "entries",
 					"entries": [
-						"A nilbog is an invisible spirit that possesses only goblins. When bereft of a host, the spirit has a flying speed of 30 feet, it can't be attacked, and it is immune to all damage and conditions. Acting on initiative count 20 (losing initiative ties), the only action it can take is to attempt to possess a goblin within 5 feet of it.",
+						"A nilbog is an invisible spirit that possesses only goblins. When bereft of a host, the spirit has a flying speed of {@imperial 30 feet}, it can't be attacked, and it is immune to all damage and conditions. Acting on initiative count 20 (losing initiative ties), the only action it can take is to attempt to possess a goblin within {@imperial 5 feet} of it.",
 						"A goblin targeted by the spirit must succeed on a {@dc 15} Charisma saving throw or become possessed. While possessed, the goblin uses the nilbog stat block. If the save succeeds, the spirit can't possess that goblin for 24 hours.",
 						"If its host is killed or the possession is ended by a spell such as hallow, magic circle, or protection from evil and good, the spirit searches for another goblin to possess. The spirit can leave its host at any time, but it won't do so willingly unless it knows there's another potential host nearby. A goblin stripped of their nilbog spirit reverts to their normal statistics and loses the traits they gained while possessed."
 					]
@@ -5247,7 +5247,7 @@
 			"name": "Quetzalcoatlus",
 			"source": "MPMM",
 			"entries": [
-				"This giant relative of the pteranodon has a wingspan exceeding 30 feet. Although it can walk like a quadruped, it is more comfortable in the air."
+				"This giant relative of the pteranodon has a wingspan exceeding {@imperial 30 feet}. Although it can walk like a quadruped, it is more comfortable in the air."
 			]
 		},
 		{
@@ -7166,7 +7166,7 @@
 					"type": "section",
 					"name": "Xvarts",
 					"entries": [
-						"Xvarts are cowardly, greedy creatures spawned by a renegade demigod, Raxivort. They have blue skin, orange eyes, and receding hairlines, mirroring their creator's appearance. They stand about 3 feet tall.",
+						"Xvarts are cowardly, greedy creatures spawned by a renegade demigod, Raxivort. They have blue skin, orange eyes, and receding hairlines, mirroring their creator's appearance. They stand about {@imperial 3 feet} tall.",
 						"Raxivort spent centuries watching over the treasury of Graz'zt, and in time, Raxivort plundered his lord's vault. One of the treasures he stole was the {@i Infinity Spindle}, a crystalline shard that could transform even a creature as lowly as Raxivort into a demigod. After his apotheosis, Raxivort forged the Black Sewers, a realm within Pandemonium that he filled with his beloved creatures, rats and bats, which xvarts befriend to this day. He enjoyed his reign only briefly before Graz'zt unleashed his vengeance. The demon prince urged villains far and wide to pursue the Infinity Spindle for themselves and destroy Raxivort."
 					]
 				}
@@ -7195,7 +7195,7 @@
 			"name": "Yeenoghu",
 			"source": "MPMM",
 			"entries": [
-				"The Beast of Butchery appears as a great scarred gnoll, towering 14 feet tall. Yeenoghu is the Gnoll Lord, and his creations are made in his twisted image. When the demon lord hunted across the Material Plane, packs of hyenas followed in his wake, and those that ate of great Yeenoghu's kills became gnolls. Few others worship the Beast of Butchery, but those who do tend to take on a gnoll-like aspect, hunching over and filing their teeth down to points.",
+				"The Beast of Butchery appears as a great scarred gnoll, towering {@imperial 14 feet} tall. Yeenoghu is the Gnoll Lord, and his creations are made in his twisted image. When the demon lord hunted across the Material Plane, packs of hyenas followed in his wake, and those that ate of great Yeenoghu's kills became gnolls. Few others worship the Beast of Butchery, but those who do tend to take on a gnoll-like aspect, hunching over and filing their teeth down to points.",
 				"Yeenoghu wants nothing more than slaughter and senseless destruction. Gnolls are his favorite instruments, and he drives his gnoll followers to ever-greater atrocities in his name, even imbuing some of their commanders with his powers, which transforms them into flinds (in this book). Yeenoghu takes pleasure in causing fear before death, and he sows sorrow and despair through destroying beloved things. He doesn't parlay; to meet him is to do battle with him\u2014unless he becomes bored and wanders away. The Beast of Butchery has a long rivalry with Baphomet, the Horned King, and the two demon lords and their followers attack one another on sight.",
 				"The Gnoll Lord is covered in matted fur and leathery hide, and his face resembles a grinning predator's skull. He wields a triple-headed flail called the Butcher, which he can summon into his hand at will, although he is as likely to tear his prey apart with his teeth.",
 				{

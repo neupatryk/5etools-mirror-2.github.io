@@ -319,7 +319,7 @@
 							"type": "entries",
 							"entries": [
 								"Palest Westruun was not a king, but his new statue in the Opal Ward is often called the {@creature Black King|TDCSR}, a subtle jab at the city's previous \"Black King,\" the tyrannical dragon Umbrasyl. The high priest of the First Bastion blessed both the {@creature Black King|TDCSR} and {@book Westruun|TDCSR|3|Westruun} itself when the statue was unveiled on the anniversary of {@book Westruun's|TDCSR|3|Westruun} reclamation, saying, \"May the {@deity The Lawbearer|Exandria|TDCSR|Lawbearer} grant us all strength of spirit when chaos next threatens our peaceful civilization. When that time comes, may the {@creature Black King|TDCSR} unsheathe his sword to rally our people and lead {@book Westruun|TDCSR|3|Westruun} to victory.\"",
-								"When the safety of all of {@book Westruun|TDCSR|3|Westruun} is threatened, the {@creature Black King|TDCSR} will animate and defend its people, becoming a {@creature Black King|TDCSR|stone golem with a speed of 60 feet, Charisma and Intelligence scores of 18 (+4), and the ability to speak Common}. Its personality is dour but determined\u2014regal and single-minded in its desire to protect its city and its people.",
+								"When the safety of all of {@book Westruun|TDCSR|3|Westruun} is threatened, the {@creature Black King|TDCSR} will animate and defend its people, becoming a {@creature Black King|TDCSR|stone golem with a speed of {@imperial 60 feet}, Charisma and Intelligence scores of 18 (+4), and the ability to speak Common}. Its personality is dour but determined\u2014regal and single-minded in its desire to protect its city and its people.",
 								"{@note See {@book The Black King|TDCSR|3|7. The Black King} for more information on this NPC.}",
 								{
 									"type": "hr"
@@ -1338,7 +1338,7 @@
 			"name": "Plainscow",
 			"source": "TDCSR",
 			"entries": [
-				"The hulking plainscow is an exceptionally sturdy beast of burden native to the {@book Dividing Plains|TDCSR|3|Dividing Plains} and used by the people of central Tal'Dorei for centuries. Though many wild herds still roam the plains, domesticated plainscows are more common, used as {@quickref Mounts and Vehicles|PHB|1|0|mounts}, pack animals, and livestock. Plainscows are unusually empathetic for beasts, and often bond with a rider for life. They stand 6 feet tall, weigh about two tons, and live for 70 years.",
+				"The hulking plainscow is an exceptionally sturdy beast of burden native to the {@book Dividing Plains|TDCSR|3|Dividing Plains} and used by the people of central Tal'Dorei for centuries. Though many wild herds still roam the plains, domesticated plainscows are more common, used as {@quickref Mounts and Vehicles|PHB|1|0|mounts}, pack animals, and livestock. Plainscows are unusually empathetic for beasts, and often bond with a rider for life. They stand {@imperial 6 feet} tall, weigh about two tons, and live for 70 years.",
 				{
 					"type": "entries",
 					"entries": [

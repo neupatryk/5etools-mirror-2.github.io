@@ -40,7 +40,7 @@
 				"survival": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"darkvision {@imperial 60 ft.}"
 			],
 			"passive": 13,
 			"resist": [
@@ -83,7 +83,7 @@
 				{
 					"name": "Fire Strike",
 					"entries": [
-						"{@atk ms,rs} {@hit 5} to hit, reach 5 ft. or range 60 ft., one target. {@h}10 ({@damage 2d6 + 3}) fire damage."
+						"{@atk ms,rs} {@hit 5} to hit, reach {@imperial 5 ft.} or range {@imperial 60 ft.}, one target. {@h}10 ({@damage 2d6 + 3}) fire damage."
 					]
 				},
 				{
@@ -207,13 +207,13 @@
 				{
 					"name": "Arcane Blast",
 					"entries": [
-						"{@atk ms,rs} {@hit 6} to hit, reach 5 ft. or range 120 ft., one target. {@h}13 ({@damage 3d6 + 3}) force damage."
+						"{@atk ms,rs} {@hit 6} to hit, reach {@imperial 5 ft.} or range {@imperial 120 ft.}, one target. {@h}13 ({@damage 3d6 + 3}) force damage."
 					]
 				},
 				{
 					"name": "Acid Rain (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Acid falls in a 10-foot-radius, 20-foot-high cylinder centered on a point Ervan can see within 120 feet of himself. Each creature in that area must make a {@dc 14} Dexterity saving throw, taking 22 ({@damage 4d10}) acid damage on a failed save, or half as much damage on a successful one."
+						"Acid falls in a 10-foot-radius, 20-foot-high cylinder centered on a point Ervan can see within {@imperial 120 feet} of himself. Each creature in that area must make a {@dc 14} Dexterity saving throw, taking 22 ({@damage 4d10}) acid damage on a failed save, or half as much damage on a successful one."
 					]
 				}
 			],
