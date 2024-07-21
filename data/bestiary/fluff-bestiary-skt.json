@@ -633,7 +633,7 @@
 						{
 							"type": "entries",
 							"entries": [
-								"Much bigger than a giant crab, a hulking crab has a body 15 to {@imperial 20 feet} in diameter. Its shell is often covered with coral, anemones, ship wreckage, or some other sort of detritus salvaged from the ocean floor."
+								"Much bigger than a giant crab, a hulking crab has a body 15 to 20 feet in diameter. Its shell is often covered with coral, anemones, ship wreckage, or some other sort of detritus salvaged from the ocean floor."
 							]
 						}
 					]
@@ -1439,7 +1439,7 @@
 						{
 							"type": "entries",
 							"entries": [
-								"A purple wormling is a baby purple worm no more than six weeks old. Its rubbery body is {@imperial 9 feet} long and weighs 1,500 pounds. Its mouth and musculature aren't yet strong enough to allow the wormling to burrow through rock. The poison in its tail stinger and the acid in its gullet are still relatively weak as well. Nevertheless, the wormling is a voracious feeder and attacks just about anything it can wrap its mouth around. A wormling's gullet can hold up to four Small creatures."
+								"A purple wormling is a baby purple worm no more than six weeks old. Its rubbery body is 9 feet long and weighs 1,500 pounds. Its mouth and musculature aren't yet strong enough to allow the wormling to burrow through rock. The poison in its tail stinger and the acid in its gullet are still relatively weak as well. Nevertheless, the wormling is a voracious feeder and attacks just about anything it can wrap its mouth around. A wormling's gullet can hold up to four Small creatures."
 							]
 						}
 					]
@@ -1707,7 +1707,7 @@
 						{
 							"type": "entries",
 							"entries": [
-								"A tressym is a mischievous winged cat as big as a house cat, with a wingspan of {@imperial 3 feet}.",
+								"A tressym is a mischievous winged cat as big as a house cat, with a wingspan of 3 feet.",
 								"Thought to be the results of wizardly experimentation on house cats, tressym are intelligent and have been known to form strong friendships with humanoids, particularly rangers and wizards. Tressym get along well with others of their kind, but they rarely lair or hunt together. They peacefully ignore bats, faerie dragons, and the like, but they hate stirges and evil flying monsters such as manticores. They also enjoy teasing dogs.",
 								"Tressym feed on small rodents, birds, and insects, stalking and pouncing on prey much as normal cats do, but with the added advantage of flight. Tressym don't, however, attack nestlings or despoil eggs.",
 								"Tressym mate with others of their kind, but they don't mate for life. A tressym can also mate with a normal cat, though only one out of every ten of their offspring will be a tressym; the others will be normal cats.",
