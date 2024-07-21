@@ -4,7 +4,7 @@ import "../../js/parser.js";
 import "../../js/utils.js";
 import "../../js/utils-proporder.js";
 
-const FILE_BLOCKLIST = new Set([
+export const FILE_BLOCKLIST = new Set([
 	"loot.json",
 	"msbcr.json",
 	"monsterfeatures.json",

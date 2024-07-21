@@ -1,6 +1,6 @@
 import fs from "fs";
 import * as ut from "./util.js";
-import { prettifyFile } from "./prettify-data/util-prettify-data.js";
+import { prettifyFile, FILE_BLOCKLIST } from "./prettify-data/util-prettify-data.js";
 
 // todo parse x-foot case
 // todo parse inches and weights
@@ -39,4 +39,4 @@ const generateImperialForJson = (path) => {
 };
 
 // todo handle for other data types
-ut.listFiles({ dir: "./data/bestiary" }).filter((file) => file.endsWith(".json")).forEach(generateImperialForJson);
+ut.listFiles({ dir: "./data/bestiary" }).filter((file) => file.endsWith(".json") && !FILE_BLOCKLIST.has(file.split("/").last())).forEach(generateImperialForJson);
