@@ -2,6 +2,7 @@ import fs from "fs";
 import * as ut from "./util.js";
 import { prettifyFile } from "./prettify-data/util-prettify-data.js";
 
+// todo parse x-foot case
 // todo parse inches and weights
 const generateImperialForJson = (path) => {
 	console.log("\tGenerating imperial tags", path);
