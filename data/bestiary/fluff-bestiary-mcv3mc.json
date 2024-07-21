@@ -64,7 +64,7 @@
 									"type": "entries",
 									"name": "Crystal Healing",
 									"entries": [
-										"When the Ender Dragon ends its turn within 60 feet of an End crystal, the crystal emits a healing beam that causes the dragon to regain 20 hit points. The dragon can benefit from such healing only once per turn."
+										"When the Ender Dragon ends its turn within {@imperial 60 feet} of an End crystal, the crystal emits a healing beam that causes the dragon to regain 20 hit points. The dragon can benefit from such healing only once per turn."
 									]
 								},
 								{

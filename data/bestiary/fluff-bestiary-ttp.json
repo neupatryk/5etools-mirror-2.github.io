@@ -16,7 +16,7 @@
 									"type": "entries",
 									"name": "Marine Decapus",
 									"entries": [
-										"A marine decapus is similar to its land-dwelling cousin, except that it gains a swimming speed of 30 feet and can breathe only underwater."
+										"A marine decapus is similar to its land-dwelling cousin, except that it gains a swimming speed of {@imperial 30 feet} and can breathe only underwater."
 									]
 								}
 							]
@@ -84,7 +84,7 @@
 						{
 							"type": "entries",
 							"entries": [
-								"Topis are similar to zombies. Before a topi is animated, its corpse is shrunk until it stands only 2 feet tall, and its heart is cut out and replaced with a leather bag that contains a live poisonous snake. The snake requires neither air nor sustenance, and it magically renders the topi's claws venomous. When a topi dies, the snake inside it dies too. The process of creating a topi is known only to a handful of evil priests and necromancers.",
+								"Topis are similar to zombies. Before a topi is animated, its corpse is shrunk until it stands only {@imperial 2 feet} tall, and its heart is cut out and replaced with a leather bag that contains a live poisonous snake. The snake requires neither air nor sustenance, and it magically renders the topi's claws venomous. When a topi dies, the snake inside it dies too. The process of creating a topi is known only to a handful of evil priests and necromancers.",
 								"Topis are more difficult to turn than ordinary zombies, and their spongy bodies make them resistant to bludgeoning.",
 								{
 									"type": "entries",

@@ -1176,7 +1176,7 @@
 										"Resistance to damage from Cold, Lightning and Necrotic.",
 										"Immunity to Poison damage and Bludgeoning, Piercing, and Slashing from Nonmagical Attacks.",
 										"Immunity to the Charmed, Exhaustion, Frightened, Paralyzed and Poisoned conditions.",
-										"If you are destroyed you gain a new body in {@dice 1d10} days, regaining all of your hit points and becoming active again. The new body appears within 5 feet of your phylactery."
+										"If you are destroyed you gain a new body in {@dice 1d10} days, regaining all of your hit points and becoming active again. The new body appears within {@imperial 5 feet} of your phylactery."
 									]
 								}
 							]
@@ -1442,7 +1442,7 @@
 								[
 									"Delphinid\u2014the space dolphin",
 									"3",
-									"Dolphin with fly speed of 30 ft."
+									"Dolphin with fly speed of {@imperial 30 ft.}"
 								],
 								[
 									"Backpack guy\u2014the space mimic",
@@ -2004,7 +2004,7 @@
 									"type": "inset",
 									"name": "Controlling Skeleton Warriors",
 									"entries": [
-										"Someone wearing a skeleton warrior or skeleton lord's golden circlet can use an action to take control of the undead creature if it is within 100 ft. There is no saving throw allowed against this control. This control is complete and allows the wearer of the golden circlet to issue commands through a telepathic link. The skeleton warrior or lord will do its best to obey simple commands such as \"attack that creature\" or \"move over there\". If the skeleton warrior or lord does not receive any orders it will defend itself as best as it is able."
+										"Someone wearing a skeleton warrior or skeleton lord's golden circlet can use an action to take control of the undead creature if it is within {@imperial 100 ft.} There is no saving throw allowed against this control. This control is complete and allows the wearer of the golden circlet to issue commands through a telepathic link. The skeleton warrior or lord will do its best to obey simple commands such as \"attack that creature\" or \"move over there\". If the skeleton warrior or lord does not receive any orders it will defend itself as best as it is able."
 									]
 								}
 							]
@@ -2163,7 +2163,7 @@
 									"type": "entries",
 									"name": "Death From Above",
 									"entries": [
-										"Rather than trapping its food within a pre-constructed web, sword spiders prefer to wait for prey high up in tree branches and on cavern walls. (Despite their large frames, sword spiders retain the ability to cling to most surfaces, making them adept climbers.) Once it spots its prey, the spider sprays the creature with a restraining web and drops down with all eight of its lethal legs extended to impale its meal. When hunting in areas not conducive to this strategy, sword spiders instead stalk and chase their prey like big cats and are able to leap forward up to 30 feet, lashing out with their forelimbs."
+										"Rather than trapping its food within a pre-constructed web, sword spiders prefer to wait for prey high up in tree branches and on cavern walls. (Despite their large frames, sword spiders retain the ability to cling to most surfaces, making them adept climbers.) Once it spots its prey, the spider sprays the creature with a restraining web and drops down with all eight of its lethal legs extended to impale its meal. When hunting in areas not conducive to this strategy, sword spiders instead stalk and chase their prey like big cats and are able to leap forward up to {@imperial 30 feet}, lashing out with their forelimbs."
 									]
 								},
 								{

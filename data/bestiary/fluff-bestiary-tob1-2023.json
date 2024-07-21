@@ -1449,7 +1449,7 @@
 									"type": "entries",
 									"name": "Clans in the Canopy",
 									"entries": [
-										"Arboreal grappler tribes build family nests decorated with bones and prized relics of past hunts. These nests are built high in the jungle canopy, typically 80 feet or more above the ground. Clans of 40 or more spread across crude villages atop the trees; in such large settlements, a third of the population are juveniles. These nests are difficult to spot from the ground; a DC 20 Wisdom ({@skill Perception}) check is required. A creature observing an arboreal grappler as it climbs into or out of a nest has advantage on the check."
+										"Arboreal grappler tribes build family nests decorated with bones and prized relics of past hunts. These nests are built high in the jungle canopy, typically {@imperial 80 feet} or more above the ground. Clans of 40 or more spread across crude villages atop the trees; in such large settlements, a third of the population are juveniles. These nests are difficult to spot from the ground; a DC 20 Wisdom ({@skill Perception}) check is required. A creature observing an arboreal grappler as it climbs into or out of a nest has advantage on the check."
 									]
 								},
 								{
@@ -1927,7 +1927,7 @@
 											"type": "entries",
 											"name": "Bright Day",
 											"entries": [
-												"This horseman has darkvision out to a range of 60 feet and resistance to cold damage and fire damage."
+												"This horseman has darkvision out to a range of {@imperial 60 feet} and resistance to cold damage and fire damage."
 											]
 										},
 										{
@@ -1941,7 +1941,7 @@
 											"type": "entries",
 											"name": "Black Night",
 											"entries": [
-												"This horseman has darkvision out to a range of 60 feet and magical darkness doesn't impede his darkvision. In addition, he has immunity to cold damage."
+												"This horseman has darkvision out to a range of {@imperial 60 feet} and magical darkness doesn't impede his darkvision. In addition, he has immunity to cold damage."
 											]
 										}
 									]
@@ -2187,7 +2187,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i Although it has the head of a shaggy bear, this humanoid creature wears armor and carries a battleaxe in one massive, clawed hand and a warhammer in the other. It's a solid slab of muscle that towers over most humans.}",
-						"The hulking bearfolk are intimidating creatures. Brutish and powerful, they combine features of humanoid beings and bears. Their heads are ursine with heavy jaws and sharp teeth. Dark fur covers their muscular bodies. Adult bearfolk stand at least 7 feet tall and weigh more than 600 pounds.",
+						"The hulking bearfolk are intimidating creatures. Brutish and powerful, they combine features of humanoid beings and bears. Their heads are ursine with heavy jaws and sharp teeth. Dark fur covers their muscular bodies. Adult bearfolk stand at least {@imperial 7 feet} tall and weigh more than 600 pounds.",
 						{
 							"type": "entries",
 							"entries": [
@@ -2446,7 +2446,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i Although slightly stooped, this male figure is muscular and broad\u2011shouldered. The creature's head is lost in a riot of moss, while a thick mustache and beard reach almost to its waist.}",
-						"The hulking, moss-haired berstuc looks sculpted out of a primordial forest\u2014it stands over 12 feet tall and weighs 800 pounds. Despite its great stature, it seems strangely gentle, with a serene, almost soothing presence. Nothing could be further from the truth; the berstuc is a murderous demon that stalks woodlands and jungles of the Material Plane.",
+						"The hulking, moss-haired berstuc looks sculpted out of a primordial forest\u2014it stands over {@imperial 12 feet} tall and weighs 800 pounds. Despite its great stature, it seems strangely gentle, with a serene, almost soothing presence. Nothing could be further from the truth; the berstuc is a murderous demon that stalks woodlands and jungles of the Material Plane.",
 						{
 							"type": "entries",
 							"entries": [
@@ -2900,7 +2900,7 @@
 									"type": "entries",
 									"name": "Emotional Echoes",
 									"entries": [
-										"Broodikens have little personality of their own and respond to their creators' emotions, growling when their creators feel anger and babbling happily when their creators feel joy. When their creators are more than 100 feet away, they cry loudly with a sound that resembles children of the creator's own species. If discovered crying by anyone other than their creator, they attack. When their creators focus their anger on specific individuals, the broodikens attack as a group, using stealth to get close and overwhelm single opponents."
+										"Broodikens have little personality of their own and respond to their creators' emotions, growling when their creators feel anger and babbling happily when their creators feel joy. When their creators are more than {@imperial 100 feet} away, they cry loudly with a sound that resembles children of the creator's own species. If discovered crying by anyone other than their creator, they attack. When their creators focus their anger on specific individuals, the broodikens attack as a group, using stealth to get close and overwhelm single opponents."
 									]
 								},
 								{
@@ -2987,7 +2987,7 @@
 									"type": "entries",
 									"name": "Pond Lurkers",
 									"entries": [
-										"The placid surfaces of forest lakes and ponds hide many lethal threats, among them the bukavac. While not amphibious, the creature can hold its breath for minutes at a time as it lurks under the surface in wait for prey. A bukavac is 11 feet long, including its foot-long horns, stands four feet tall, and weighs 4,000 lb. The creature has a natural lifespan of 40 years, but its noise and proclivity to ambush intelligent prey attracts the attention of hunting parties, which considerably shortens the life expectancy of most bukavac."
+										"The placid surfaces of forest lakes and ponds hide many lethal threats, among them the bukavac. While not amphibious, the creature can hold its breath for minutes at a time as it lurks under the surface in wait for prey. A bukavac is {@imperial 11 feet} long, including its foot-long horns, stands four feet tall, and weighs 4,000 lb. The creature has a natural lifespan of 40 years, but its noise and proclivity to ambush intelligent prey attracts the attention of hunting parties, which considerably shortens the life expectancy of most bukavac."
 									]
 								},
 								{
@@ -4488,7 +4488,7 @@
 											"type": "entries",
 											"name": "Familiar",
 											"entries": [
-												"The drake can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the drake senses as long as they are within 1 mile of each other. While the drake is within 10 feet of its companion, the companion shares the drake's Magic Resistance trait. At any time and for any reason, the drake can end its service as a familiar, ending the telepathic bond."
+												"The drake can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the drake senses as long as they are within {@imperial 1 mile} of each other. While the drake is within {@imperial 10 feet} of its companion, the companion shares the drake's Magic Resistance trait. At any time and for any reason, the drake can end its service as a familiar, ending the telepathic bond."
 											]
 										}
 									]
@@ -4834,7 +4834,7 @@
 									"type": "entries",
 									"name": "Love Darkness",
 									"entries": [
-										"Deep drakes are 12 feet long, plus a three-foot long tail, and weigh up to 1,500 pounds. Their coloration makes them ideal predators in the subterranean dark. They love life underground, and they feel a kinship with the aberrations and undead residing there. They avoid sunlight and are strictly nocturnal when on the surface."
+										"Deep drakes are {@imperial 12 feet} long, plus a three-foot long tail, and weigh up to 1,500 pounds. Their coloration makes them ideal predators in the subterranean dark. They love life underground, and they feel a kinship with the aberrations and undead residing there. They avoid sunlight and are strictly nocturnal when on the surface."
 									]
 								},
 								{
@@ -5169,7 +5169,7 @@
 									"entries": [
 										"A cult dedicated to an anthropomorphic deity with the body of a human and the head of a bat emerged around 100 BCE with the Zapotec Indians of southwest Mexico. This god was associated with night, death, and sacrifice. In time, the veneration of Camazotz, or Cama Zotz (translated as \"death bat\" or \"snatch bat\"), found its way into Maya lore.",
 										"In older editions of the world's greatest roleplaying game, there was some debate as to whether Zotzilaha was another name for Camazotz, but in Central American lore, there was no debate. The Popol Vuh, a sacred Maya text, clearly identifies Zotzilaha as the cavernous \"house of bats\" where Camazotz resides, not an entity.",
-										"The Camazotz myth may have sprung from a real creature. Fossil records found in Central and South America dating back approximately 2,000 years reveal the existence of an abnormally large bat with a wingspan of as much as 10 feet! This super-bat, called{@i Desmodus draculae}, may have co-existed with the early Zapotecs and been the source of their Camazotz legends.",
+										"The Camazotz myth may have sprung from a real creature. Fossil records found in Central and South America dating back approximately 2,000 years reveal the existence of an abnormally large bat with a wingspan of as much as {@imperial 10 feet}! This super-bat, called{@i Desmodus draculae}, may have co-existed with the early Zapotecs and been the source of their Camazotz legends.",
 										"Belief in bat demons is widespread throughout Mesoamerica: Hik'al, or \"neck-slitter,\" of Chiapas; Socouyant of Trinidad; and Tin Tin of Ecuador. Cryptozoologists believe that those monstrous bats may still be alive today, as reports of giant, bat-like creatures occasionally surface throughout Latin America, from the Rio Grande Valley in Texas to Brazil, from Puerto Rico to Mexico."
 									]
 								}
@@ -5196,7 +5196,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i A yellow-green fire burns atop the head of this towering, redfurred demon, which resembles an enormous mandrill. It has massive, muscular arms tipped with razor-sharp claws, a slavering jaw filled with huge fangs, and tusks that curl back almost to its blue cheeks.}",
-						"Towering around 25 feet tall, Mechuiti, Lord of Cannibal Apes, can stand erect like a human or walk on his knuckles, like a great ape.",
+						"Towering around {@imperial 25 feet} tall, Mechuiti, Lord of Cannibal Apes, can stand erect like a human or walk on his knuckles, like a great ape.",
 						{
 							"type": "entries",
 							"entries": [
@@ -5466,7 +5466,7 @@
 									"type": "entries",
 									"name": "Tiny Fangs",
 									"entries": [
-										"A dipsa's undulating movement evokes that of a snake as much as its serpentine form, but close examination reveals that it has neither bones nor internal organs, only tiny fangs of the same color and substance as the rest of its body. A dipsa never exceeds 1 foot in length. Its coloration oscillates between sickly hues of yellow or green."
+										"A dipsa's undulating movement evokes that of a snake as much as its serpentine form, but close examination reveals that it has neither bones nor internal organs, only tiny fangs of the same color and substance as the rest of its body. A dipsa never exceeds {@imperial 1 foot} in length. Its coloration oscillates between sickly hues of yellow or green."
 									]
 								},
 								{
@@ -5849,7 +5849,7 @@
 									"type": "entries",
 									"name": "Long Memories",
 									"entries": [
-										"Dragonleaf trees live up to 1,000 years. They stand 15 feet tall and weigh 3,000 pounds, but ancient specimens can reach heights of 45 feet. Growing a new dragonleaf tree requires a cutting from an existing tree at least 50 years old, which the tree's draconic master imbues with power, sacrificing the use of its breath weapon for a month. While this time barely registers on a dragon's whole lifespan, it still carefully considers the creation of a new tree, for fear that others might discover its temporary weakness."
+										"Dragonleaf trees live up to 1,000 years. They stand {@imperial 15 feet} tall and weigh 3,000 pounds, but ancient specimens can reach heights of {@imperial 45 feet}. Growing a new dragonleaf tree requires a cutting from an existing tree at least 50 years old, which the tree's draconic master imbues with power, sacrificing the use of its breath weapon for a month. While this time barely registers on a dragon's whole lifespan, it still carefully considers the creation of a new tree, for fear that others might discover its temporary weakness."
 									]
 								},
 								{
@@ -6240,7 +6240,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i This terrible creature resembles an imposing knight wearing baroque plate armor made of calcified resin. Its helm is a blank gray oval without eye slots or mouthpiece, and one of its arms ends in a slavering, fanged mouth.}",
-						"Eaters of dust can consume just about anything with their horrible maw-arms, but they prefer the flesh and souls of mortals. This ability to sustain themselves on almost anything, even on dust and soil, earned them their current name, given by the fiends that employ them, after their original name was long forgotten. A typical eater of dust is 7 feet tall and weighs more than 350 pounds. While an eater of dust cannot speak, it can telepathically communicate.",
+						"Eaters of dust can consume just about anything with their horrible maw-arms, but they prefer the flesh and souls of mortals. This ability to sustain themselves on almost anything, even on dust and soil, earned them their current name, given by the fiends that employ them, after their original name was long forgotten. A typical eater of dust is {@imperial 7 feet} tall and weighs more than 350 pounds. While an eater of dust cannot speak, it can telepathically communicate.",
 						{
 							"type": "entries",
 							"entries": [
@@ -7796,7 +7796,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i A pasty-white spider the size of a horse slinks through the shadows. It fades from sight with a ghostly blue shimmer.}",
-						"Ghostwalk spiders are malevolent hunters that sprang from misguided experiments on phase spiders. They are spindly, emaciated things all but devoid of color. The spider is 8 feet in diameter (including legs) and weighs 500 pounds.",
+						"Ghostwalk spiders are malevolent hunters that sprang from misguided experiments on phase spiders. They are spindly, emaciated things all but devoid of color. The spider is {@imperial 8 feet} in diameter (including legs) and weighs 500 pounds.",
 						{
 							"type": "entries",
 							"entries": [
@@ -8217,7 +8217,7 @@
 									"type": "entries",
 									"name": "Greyfur Elders",
 									"entries": [
-										"Greyfurs are the eldest and most revered lemurfolk, as much as 80 years old. Their age can be estimated by the graying of their fur, but they don't track the years. Greyfurs are cunning individuals and command the arcane arts, though they rarely pursue the art of necromancy\u2014a strong taboo prohibits them from interacting with the dead. A typical lemurfolk stands 2 feet tall and weighs 30 pounds."
+										"Greyfurs are the eldest and most revered lemurfolk, as much as 80 years old. Their age can be estimated by the graying of their fur, but they don't track the years. Greyfurs are cunning individuals and command the arcane arts, though they rarely pursue the art of necromancy\u2014a strong taboo prohibits them from interacting with the dead. A typical lemurfolk stands {@imperial 2 feet} tall and weighs 30 pounds."
 									]
 								}
 							]
@@ -8564,7 +8564,7 @@
 									"type": "entries",
 									"name": "Silent and Wealthy",
 									"entries": [
-										"Hoard golems cannot speak. A hoard golem is 25 feet tall and weighs 20,000 pounds. A hoard golem's body is composed of items\u2014copper, silver, gold, works of art, armor, weapons, and magical items\u2014worth at least 5,000 gp"
+										"Hoard golems cannot speak. A hoard golem is {@imperial 25 feet} tall and weighs 20,000 pounds. A hoard golem's body is composed of items\u2014copper, silver, gold, works of art, armor, weapons, and magical items\u2014worth at least 5,000 gp"
 									]
 								}
 							]
@@ -8751,7 +8751,7 @@
 									"type": "entries",
 									"name": "Calm Friend",
 									"entries": [
-										"When its emotions are under control, a hulking whelp is friendly and even helpful, although this has more to do with its guilt over past actions than a true desire to help others. In its calm form, a hulking whelp is just over three feet tall at the shoulder and weighs 50 pounds. Unleashed, it is 20 feet tall and 4,000 pounds."
+										"When its emotions are under control, a hulking whelp is friendly and even helpful, although this has more to do with its guilt over past actions than a true desire to help others. In its calm form, a hulking whelp is just over three feet tall at the shoulder and weighs 50 pounds. Unleashed, it is {@imperial 20 feet} tall and 4,000 pounds."
 									]
 								}
 							]
@@ -9851,7 +9851,7 @@
 									"type": "entries",
 									"name": "Greyfur Elders",
 									"entries": [
-										"Greyfurs are the eldest and most revered lemurfolk, as much as 80 years old. Their age can be estimated by the graying of their fur, but they don't track the years. Greyfurs are cunning individuals and command the arcane arts, though they rarely pursue the art of necromancy\u2014a strong taboo prohibits them from interacting with the dead. A typical lemurfolk stands 2 feet tall and weighs 30 pounds."
+										"Greyfurs are the eldest and most revered lemurfolk, as much as 80 years old. Their age can be estimated by the graying of their fur, but they don't track the years. Greyfurs are cunning individuals and command the arcane arts, though they rarely pursue the art of necromancy\u2014a strong taboo prohibits them from interacting with the dead. A typical lemurfolk stands {@imperial 2 feet} tall and weighs 30 pounds."
 									]
 								}
 							]
@@ -9958,7 +9958,7 @@
 											"type": "entries",
 											"name": "Familiar",
 											"entries": [
-												"The library automaton can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the automaton senses as long as they are within 1 mile of each other. While the automaton is within 10 feet of its companion, the companion has resistance to psychic damage. At any time and for any reason, the automaton can end its service as a familiar, ending the telepathic bond."
+												"The library automaton can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the automaton senses as long as they are within {@imperial 1 mile} of each other. While the automaton is within {@imperial 10 feet} of its companion, the companion has resistance to psychic damage. At any time and for any reason, the automaton can end its service as a familiar, ending the telepathic bond."
 											]
 										}
 									]
@@ -11449,7 +11449,7 @@
 									"type": "entries",
 									"name": "Shapeshifter Plants",
 									"entries": [
-										"Morphoi are shape-shifting plant creatures indigenous to many islands. In their natural forms, the morphoi are androgynous beings between 5 and 6 feet tall. Their elliptical heads have pairs of eyes on both front and back. When harmed, they bleed a dark red sap. As plants, the morphoi don't need to eat. Instead, they gather nutrients from the sun and air. When posing as humanoids, they consume small amounts of food to aid their disguise, but since they have no internal digestive system, the food is just stored inside their bodies until they can spit it out."
+										"Morphoi are shape-shifting plant creatures indigenous to many islands. In their natural forms, the morphoi are androgynous beings between 5 and {@imperial 6 feet} tall. Their elliptical heads have pairs of eyes on both front and back. When harmed, they bleed a dark red sap. As plants, the morphoi don't need to eat. Instead, they gather nutrients from the sun and air. When posing as humanoids, they consume small amounts of food to aid their disguise, but since they have no internal digestive system, the food is just stored inside their bodies until they can spit it out."
 									]
 								},
 								{
@@ -11925,7 +11925,7 @@
 							"type": "entries",
 							"name": "A Nihileth's Lair",
 							"entries": [
-								"While aboleths create their lairs underwater, spending most of their time submerged, a nihileth can create a lair outside the water, often in a cave or a ruined, abandoned city. Nihileth lairs on land typically contain several pools of water and are often within at least 1 mile of a large body of water, as the nihileth's ability to fully function outside of water is limited."
+								"While aboleths create their lairs underwater, spending most of their time submerged, a nihileth can create a lair outside the water, often in a cave or a ruined, abandoned city. Nihileth lairs on land typically contain several pools of water and are often within at least {@imperial 1 mile} of a large body of water, as the nihileth's ability to fully function outside of water is limited."
 							]
 						}
 					]
@@ -12915,7 +12915,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i This silver sphere, polished to a mirror-like sheen bobs gently in the air for a moment before suddenly flattening out into a round, serrated blade.}",
-						"The quicksilver siege orb is an alchemical construct designed for use as a siege weapon. The orb measures 3 feet in diameter and weighs 30 pounds. When it changes to disk form, its diameter increases to 6 feet, but it is only an inch thin.",
+						"The quicksilver siege orb is an alchemical construct designed for use as a siege weapon. The orb measures {@imperial 3 feet} in diameter and weighs 30 pounds. When it changes to disk form, its diameter increases to {@imperial 6 feet}, but it is only an inch thin.",
 						{
 							"type": "entries",
 							"entries": [
@@ -13280,7 +13280,7 @@
 									"type": "entries",
 									"name": "Flightless But Bold",
 									"entries": [
-										"Though they have no wings and normally cannot fly, the physiology of ravenfolk is strikingly similar to that of true avians. They stand roughly 5 feet tall and, because of their hollow bones, weigh just 95\u2013105 pounds. Albino ravenfolk are often found in southern climates. Ravenfolk eat almost anything, but they prefer raw meat and field grains, such as corn, soy, and alfalfa. They even scavenge days-old carrion, a practice that repulses most other humanoids."
+										"Though they have no wings and normally cannot fly, the physiology of ravenfolk is strikingly similar to that of true avians. They stand roughly {@imperial 5 feet} tall and, because of their hollow bones, weigh just 95\u2013105 pounds. Albino ravenfolk are often found in southern climates. Ravenfolk eat almost anything, but they prefer raw meat and field grains, such as corn, soy, and alfalfa. They even scavenge days-old carrion, a practice that repulses most other humanoids."
 									]
 								},
 								{
@@ -13327,7 +13327,7 @@
 									"type": "entries",
 									"name": "Flightless But Bold",
 									"entries": [
-										"Though they have no wings and normally cannot fly, the physiology of ravenfolk is strikingly similar to that of true avians. They stand roughly 5 feet tall and, because of their hollow bones, weigh just 95\u2013105 pounds. Albino ravenfolk are often found in southern climates. Ravenfolk eat almost anything, but they prefer raw meat and field grains, such as corn, soy, and alfalfa. They even scavenge days-old carrion, a practice that repulses most other humanoids."
+										"Though they have no wings and normally cannot fly, the physiology of ravenfolk is strikingly similar to that of true avians. They stand roughly {@imperial 5 feet} tall and, because of their hollow bones, weigh just 95\u2013105 pounds. Albino ravenfolk are often found in southern climates. Ravenfolk eat almost anything, but they prefer raw meat and field grains, such as corn, soy, and alfalfa. They even scavenge days-old carrion, a practice that repulses most other humanoids."
 									]
 								},
 								{
@@ -13383,7 +13383,7 @@
 									"type": "entries",
 									"name": "Flightless But Bold",
 									"entries": [
-										"Though they have no wings and normally cannot fly, the physiology of ravenfolk is strikingly similar to that of true avians. They stand roughly 5 feet tall and, because of their hollow bones, weigh just 95\u2013105 pounds. Albino ravenfolk are often found in southern climates. Ravenfolk eat almost anything, but they prefer raw meat and field grains, such as corn, soy, and alfalfa. They even scavenge days-old carrion, a practice that repulses most other humanoids."
+										"Though they have no wings and normally cannot fly, the physiology of ravenfolk is strikingly similar to that of true avians. They stand roughly {@imperial 5 feet} tall and, because of their hollow bones, weigh just 95\u2013105 pounds. Albino ravenfolk are often found in southern climates. Ravenfolk eat almost anything, but they prefer raw meat and field grains, such as corn, soy, and alfalfa. They even scavenge days-old carrion, a practice that repulses most other humanoids."
 									]
 								},
 								{
@@ -14764,7 +14764,7 @@
 									"type": "entries",
 									"name": "Swaying, Snakelike Cats",
 									"entries": [
-										"Serpopards are 13 feet long and weigh 600 pounds, with little gender dimorphism. They have feline bodies but long, serpentine necks topped by vaguely draconic heads. Their hairless paws have wickedly curved, retractable talons. A serpopard's neck is in constant motion, swaying like a cobra, allowing it to track foes on all sides and to strike in unexpected directions."
+										"Serpopards are {@imperial 13 feet} long and weigh 600 pounds, with little gender dimorphism. They have feline bodies but long, serpentine necks topped by vaguely draconic heads. Their hairless paws have wickedly curved, retractable talons. A serpopard's neck is in constant motion, swaying like a cobra, allowing it to track foes on all sides and to strike in unexpected directions."
 									]
 								},
 								{
@@ -15048,7 +15048,7 @@
 					"type": "entries",
 					"entries": [
 						"{@i A hulking brute, this elvish figure towers over his fellows and wields massive weapons. Patches of his body are swallowed by inky blackness that writhes and crawls, and his eyes are hollow black pits.}",
-						"Shadow fey guardians are massive creatures trained and bred for battle. They appear as massive versions of shadow fey, but the stuff of shadow corrupts them even more than their brethren, expanding their size and power to an ogreish strength. Patches of shadow swallow parts of their body and crawl about, revealing and obscuring more by inches at a time. They stand nearly 10 feet tall and weigh over 700 pounds.",
+						"Shadow fey guardians are massive creatures trained and bred for battle. They appear as massive versions of shadow fey, but the stuff of shadow corrupts them even more than their brethren, expanding their size and power to an ogreish strength. Patches of shadow swallow parts of their body and crawl about, revealing and obscuring more by inches at a time. They stand nearly {@imperial 10 feet} tall and weigh over 700 pounds.",
 						{
 							"type": "entries",
 							"entries": [
@@ -15645,7 +15645,7 @@
 									"type": "entries",
 									"name": "Born in Storms",
 									"entries": [
-										"When a great storm rips across a world in the Material Plane, it sometimes tears loose the fabric of reality, releasing sentient creatures composed entirely of elemental energy. Occasionally when a spark forms, an oppositely charged mate is created at the same time. When this happens, the two always stay within 300 feet of one another."
+										"When a great storm rips across a world in the Material Plane, it sometimes tears loose the fabric of reality, releasing sentient creatures composed entirely of elemental energy. Occasionally when a spark forms, an oppositely charged mate is created at the same time. When this happens, the two always stay within {@imperial 300 feet} of one another."
 									]
 								},
 								{
@@ -15894,7 +15894,7 @@
 									"type": "entries",
 									"name": "Enormous Size and Color",
 									"entries": [
-										"This immense saurian has a long, tooth-filled maw, powerful claws, and colorful spines running the length of its back. An adult spinosaurus is 70 feet long and weighs 35,000 pounds or more, while a young spinosaurus is a mere 20 feet long, weighing 6,000 pounds or more."
+										"This immense saurian has a long, tooth-filled maw, powerful claws, and colorful spines running the length of its back. An adult spinosaurus is {@imperial 70 feet} long and weighs 35,000 pounds or more, while a young spinosaurus is a mere {@imperial 20 feet} long, weighing 6,000 pounds or more."
 									]
 								},
 								{
@@ -16087,7 +16087,7 @@
 									"type": "entries",
 									"name": "Boilers and Hydraulics",
 									"entries": [
-										"A steam golem is built around a central boiler with clockwork gears and hydraulic cylinders powering its legs and arms. Most steam golems have axe blades welded onto each of their arms, and many have one arm extended in a single, long-hafted axe. They tower 10 feet tall, and their legs are often built with reversed knee joints for greater leverage when they move. The eyes of a steam golem glow orange or red from its internal fires."
+										"A steam golem is built around a central boiler with clockwork gears and hydraulic cylinders powering its legs and arms. Most steam golems have axe blades welded onto each of their arms, and many have one arm extended in a single, long-hafted axe. They tower {@imperial 10 feet} tall, and their legs are often built with reversed knee joints for greater leverage when they move. The eyes of a steam golem glow orange or red from its internal fires."
 									]
 								},
 								{
@@ -16195,7 +16195,7 @@
 											"type": "entries",
 											"name": "Familiar",
 											"entries": [
-												"The stryx can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the stryx senses as long as they are within 1 mile of each other. While the stryx is within 10 feet of its companion, the companion shares the stryx's Keen Hearing and Sight trait. At any time and for any reason, the stryx can end its service as a familiar, ending the telepathic bond."
+												"The stryx can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the stryx senses as long as they are within {@imperial 1 mile} of each other. While the stryx is within {@imperial 10 feet} of its companion, the companion shares the stryx's Keen Hearing and Sight trait. At any time and for any reason, the stryx can end its service as a familiar, ending the telepathic bond."
 											]
 										}
 									]
@@ -16325,7 +16325,7 @@
 									"type": "entries",
 									"name": "Riverbank Homes",
 									"entries": [
-										"Subek are crocodilian humanoids that dwell along the banks of great rivers. They have muscular physiques, surprisingly dexterous hands, and a frightening maw of sharp teeth. They are 9 feet tall, average 700 pounds, and can live up to 300 years. During the dry season, subek are friendly and thoughtful scholars, historians, and artisans."
+										"Subek are crocodilian humanoids that dwell along the banks of great rivers. They have muscular physiques, surprisingly dexterous hands, and a frightening maw of sharp teeth. They are {@imperial 9 feet} tall, average 700 pounds, and can live up to 300 years. During the dry season, subek are friendly and thoughtful scholars, historians, and artisans."
 									]
 								},
 								{
@@ -16393,7 +16393,7 @@
 									"type": "inset",
 									"name": "Sutureflies in Midgard",
 									"entries": [
-										"In the Mistwallows of the deep Margreve, a green and gold variety of suturefly attacks briar folk, hags, and any others who allow magic to escape their lips. Sutureflies dart, hover, and strafe with perfect maneuverability. Most are six inches long, but rangers who've ventured deep into the Margreve claim to have discovered detached suturefly wings over 5 feet long, likely from a creature capable of sewing shut the eyes and mouths of giants.",
+										"In the Mistwallows of the deep Margreve, a green and gold variety of suturefly attacks briar folk, hags, and any others who allow magic to escape their lips. Sutureflies dart, hover, and strafe with perfect maneuverability. Most are six inches long, but rangers who've ventured deep into the Margreve claim to have discovered detached suturefly wings over {@imperial 5 feet} long, likely from a creature capable of sewing shut the eyes and mouths of giants.",
 										"Folk of the outer Margreve release sutureflies from wooden coffers at forest trials to encourage witnesses to tell the truth. In the heart of the woods, one of Baba Yaga's daughters polices her \"flock\" of stolen children with sutureflies."
 									]
 								}
@@ -16910,7 +16910,7 @@
 									"type": "entries",
 									"name": "Slow to Mate",
 									"entries": [
-										"Titanoboas mate rarely. They live for hundreds of years and never stop growing, which makes the need for propagation less urgent. When two titanoboas nest, the result is a brood of a half-dozen smaller snakes. An adult titanoboa is at least 80 feet long and weighs 6,000 pounds or more."
+										"Titanoboas mate rarely. They live for hundreds of years and never stop growing, which makes the need for propagation less urgent. When two titanoboas nest, the result is a brood of a half-dozen smaller snakes. An adult titanoboa is at least {@imperial 80 feet} long and weighs 6,000 pounds or more."
 									]
 								}
 							]
@@ -17301,7 +17301,7 @@
 									"type": "entries",
 									"name": "Alchemical Flotation",
 									"entries": [
-										"These aerial jellyfish waft through the air like balloons, suspended by internal alchemical reactions. This mode of movement takes them vertically when they wish or allows them to drift with the winds. They can reach altitudes of 30,000 feet."
+										"These aerial jellyfish waft through the air like balloons, suspended by internal alchemical reactions. This mode of movement takes them vertically when they wish or allows them to drift with the winds. They can reach altitudes of {@imperial 30,000 feet}."
 									]
 								},
 								{
@@ -17580,7 +17580,7 @@
 									"type": "entries",
 									"name": "Choosers of the Slain",
 									"entries": [
-										"Valkyries are sent by Odin to decide the course of battles and harvest the souls of brave fallen warriors. Riding winged wolves (use the statistics of a winter wolf with a flying speed of 80 feet and a neutral alignment), they visit battlefields to do their master's will, surrounded by crows and ravens. Valkyries remain hidden among the ravens during these missions, acting only when fate decrees."
+										"Valkyries are sent by Odin to decide the course of battles and harvest the souls of brave fallen warriors. Riding winged wolves (use the statistics of a winter wolf with a flying speed of {@imperial 80 feet} and a neutral alignment), they visit battlefields to do their master's will, surrounded by crows and ravens. Valkyries remain hidden among the ravens during these missions, acting only when fate decrees."
 									]
 								},
 								{
@@ -18474,7 +18474,7 @@
 											"type": "entries",
 											"name": "Familiar",
 											"entries": [
-												"The witchlight can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the witchlight senses as long as they are within 1 mile of each other. While the witchlight is within 10 feet of its companion, the companion can't be blinded. At any time and for any reason, the witchlight can end its service as a familiar, ending the telepathic bond."
+												"The witchlight can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the witchlight senses as long as they are within {@imperial 1 mile} of each other. While the witchlight is within {@imperial 10 feet} of its companion, the companion can't be blinded. At any time and for any reason, the witchlight can end its service as a familiar, ending the telepathic bond."
 											]
 										}
 									]
@@ -18944,7 +18944,7 @@
 									"type": "entries",
 									"name": "Enormous Size and Color",
 									"entries": [
-										"This immense saurian has a long, tooth-filled maw, powerful claws, and colorful spines running the length of its back. An adult spinosaurus is 70 feet long and weighs 35,000 pounds or more, while a young spinosaurus is a mere 20 feet long, weighing 6,000 pounds or more."
+										"This immense saurian has a long, tooth-filled maw, powerful claws, and colorful spines running the length of its back. An adult spinosaurus is {@imperial 70 feet} long and weighs 35,000 pounds or more, while a young spinosaurus is a mere {@imperial 20 feet} long, weighing 6,000 pounds or more."
 									]
 								},
 								{
@@ -19092,7 +19092,7 @@
 									"type": "entries",
 									"name": "Jungle Bred",
 									"entries": [
-										"A Zanskaran viper grows quickly in its jungle home, and some even venture into the savannah to terrorize antelopes and young giraffes. A full-grown Zanskaran viper is up to 30 feet long and weighs up to 400 pounds."
+										"A Zanskaran viper grows quickly in its jungle home, and some even venture into the savannah to terrorize antelopes and young giraffes. A full-grown Zanskaran viper is up to {@imperial 30 feet} long and weighs up to 400 pounds."
 									]
 								},
 								{
