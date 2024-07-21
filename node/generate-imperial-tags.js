@@ -10,7 +10,7 @@ const generateImperialForJson = (path) => {
 
 	const prepareImperialTags = (value) => {
 		const cleanTags = /{@imperial\s(\S+\s[^}]+)}/gim;
-		const matchGroups = /(?<=\s|^)((?:(?:(?:\d+,)*\d+)(?:-|\\|\/))?(?:(?:\d+,)*\d+))\s(foot\b|feet\b|mile\b|miles\b|ft\.)/gim;
+		const matchGroups = /(?<=\s|^)((?:(?:(?:\d+,)*\d+)(?:-|\\|\/))?(?:(?:\d+,)*\d+))\s(foot\b|feet\b|mile\b|miles\b|ft\.|mi\.)/gim;
 
 		const cleanedValue = value.replace(cleanTags, (_, strippedContent) => strippedContent);
 		return cleanedValue.replace(matchGroups, (_, value, unit) => `{@imperial ${value} ${unit}}`);

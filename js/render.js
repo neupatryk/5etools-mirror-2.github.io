@@ -1799,7 +1799,7 @@ globalThis.Renderer = function () {
 				let isShortForm;
 
 				switch (unit) {
-					case "mile": case "miles": {
+					case "mile": case "miles": case "mi.": {
 						originalUnit = "mi";
 						isShortForm = unit === "mi.";
 						break;
