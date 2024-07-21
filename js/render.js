@@ -1786,7 +1786,7 @@ globalThis.Renderer = function () {
 				break;
 			}
 			case "@imperial": {
-				const isMetric = true;
+				const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
 
 				if (!isMetric) {
 					textStack[0] += text;

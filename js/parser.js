@@ -252,7 +252,7 @@ Parser.getAbilityModifier = function (abilityScore) {
 	return `${modifier}`;
 };
 
-Parser.getSpeedString = (ent, {isMetric = false, isSkipZeroWalk = false} = {}) => {
+Parser.getSpeedString = (ent, {isMetric = VetoolsConfig.get("styleSwitcher", "isMetric"), isSkipZeroWalk = false} = {}) => {
 	if (ent.speed == null) return "\u2014";
 
 	const unit = isMetric ? Parser.metric.getMetricUnit({originalUnit: "ft.", isShortForm: true}) : "ft.";

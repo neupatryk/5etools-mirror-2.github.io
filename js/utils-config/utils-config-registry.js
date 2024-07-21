@@ -25,6 +25,13 @@ const settingsGroupStyleSwitcher = new ConfigSettingsGroup({
 				_getEleExternal () { return StyleSwitcher.getCbWide(); }
 			}
 		)(),
+		new ConfigSettingBoolean({
+			configId: "isMetric",
+			name: `Enable conversion to metric units (requires reload)`,
+			help: `If units should be rendered in metric system rather than imperial`,
+			isRowLabel: true,
+			default: false,
+		}),
 	],
 });
 
