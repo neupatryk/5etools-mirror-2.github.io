@@ -1797,28 +1797,28 @@ globalThis.Renderer = function () {
 
 				let originalUnit;
 				let isShortForm;
-				let isPlural;
 
 				switch (unit) {
 					case "mile": case "miles": {
 						originalUnit = "mi";
 						isShortForm = unit === "mi.";
-						isPlural = unit === "miles";
 						break;
 					}
 					case "ft.": case "feet": case "foot": {
 						originalUnit = "ft";
 						isShortForm = unit === "ft.";
-						isPlural = unit === "feet";
 						break;
 					}
 					default:
 						throw new Error(`Unhandled imperial unit: ${unit}`);
 				}
 
+				let isPlural;
 				const splitNumbersRegex = /(?:((?:\d+,)*\d+)(-|\\|\/))?((?:\d+,)*\d+)/gm;
 				const parsedValue = value.replace(/,/g, "").replace(splitNumbersRegex, (_, v1, v2, v3) => {
 					const preparedValue = Parser.metric.getMetricNumber({originalValue: v3, originalUnit});
+					isPlural = preparedValue !== 1 || !!v1;
+
 					if (!v1) return preparedValue;
 					return `${Parser.metric.getMetricNumber({originalValue: v1, originalUnit})}${v2}${preparedValue}`;
 				});
