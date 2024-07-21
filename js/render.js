@@ -1785,6 +1785,49 @@ globalThis.Renderer = function () {
 				textStack[0] += isNaN(amount) ? unitSingle : Number(amount) > 1 ? (unitPlural || unitSingle.toPlural()) : unitSingle;
 				break;
 			}
+			case "@imperial": {
+				const isMetric = true;
+
+				if (!isMetric) {
+					textStack[0] += text;
+					break;
+				}
+
+				const [value, unit] = text.split(" ");
+
+				let originalUnit;
+				let isShortForm;
+				let isPlural;
+
+				switch (unit) {
+					case "mile": case "miles": {
+						originalUnit = "mi";
+						isShortForm = unit === "mi.";
+						isPlural = unit === "miles";
+						break;
+					}
+					case "ft.": case "feet": case "foot": {
+						originalUnit = "ft";
+						isShortForm = unit === "ft.";
+						isPlural = unit === "feet";
+						break;
+					}
+					default:
+						throw new Error(`Unhandled imperial unit: ${unit}`);
+				}
+
+				const splitNumbersRegex = /(?:((?:\d+,)*\d+)(-|\\|\/))?((?:\d+,)*\d+)/gm;
+				const parsedValue = value.replace(/,/g, "").replace(splitNumbersRegex, (_, v1, v2, v3) => {
+					const preparedValue = Parser.metric.getMetricNumber({originalValue: v3, originalUnit});
+					if (!v1) return preparedValue;
+					return `${Parser.metric.getMetricNumber({originalValue: v1, originalUnit})}${v2}${preparedValue}`;
+				});
+
+				const parsedUnit = Parser.metric.getMetricUnit({originalUnit, isPlural, isShortForm});
+
+				textStack[0] += `${parsedValue} ${parsedUnit}`;
+				break;
+			}
 
 			// Comic styles ////////////////////////////////////////////////////////////////////////////////////
 			case "@comic":
@@ -4527,6 +4570,10 @@ Renderer.tag = class {
 		}
 	};
 
+	static TagImperial = class extends this._TagBaseAt {
+		tagName = "imperial";
+	};
+
 	static TagHitText = class extends this._TagBaseAt {
 		tagName = "h";
 
@@ -5061,6 +5108,7 @@ Renderer.tag = class {
 		new this.TagTip(),
 
 		new this.TagUnit(),
+		new this.TagImperial(),
 
 		new this.TagHitText(),
 		new this.TagMissText(),
