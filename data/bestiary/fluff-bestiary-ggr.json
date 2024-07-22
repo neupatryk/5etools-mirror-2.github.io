@@ -547,7 +547,7 @@
 											"rows": [
 												[
 													"1",
-													"Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within {@imperial 5 feet} of it takes 2 ({@damage 1d4}) acid damage (category 1), 4 ({@damage 1d8}) acid damage (category 2), or 6 ({@damage 1d12}) acid damage (category 3)."
+													"Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within 5 feet of it takes 2 ({@damage 1d4}) acid damage (category 1), 4 ({@damage 1d8}) acid damage (category 2), or 6 ({@damage 1d12}) acid damage (category 3)."
 												],
 												[
 													"2",
@@ -567,7 +567,7 @@
 												],
 												[
 													"6",
-													"Hypnotic Display {@recharge 5}. As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within {@imperial 15 feet} of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours."
+													"Hypnotic Display {@recharge 5}. As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours."
 												],
 												[
 													"7",
@@ -617,7 +617,7 @@
 												],
 												[
 													"7",
-													"Leaping Legs. With or without a running start, the krasis's long jump is {@imperial 20 feet} (category 1), {@imperial 30 feet} (category 2), or {@imperial 40 feet} (category 3). Its high jump is {@imperial 10 feet} (category 1), {@imperial 20 feet} (category 2), or {@imperial 30 feet} (category 3)."
+													"Leaping Legs. With or without a running start, the krasis's long jump is 20 feet (category 1), 30 feet (category 2), or 40 feet (category 3). Its high jump is 10 feet (category 1), 20 feet (category 2), or 30 feet (category 3)."
 												],
 												[
 													"8",
@@ -680,7 +680,7 @@
 											"rows": [
 												[
 													"1",
-													"Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within {@imperial 5 feet} of it takes 2 ({@damage 1d4}) acid damage (category 1), 4 ({@damage 1d8}) acid damage (category 2), or 6 ({@damage 1d12}) acid damage (category 3)."
+													"Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within 5 feet of it takes 2 ({@damage 1d4}) acid damage (category 1), 4 ({@damage 1d8}) acid damage (category 2), or 6 ({@damage 1d12}) acid damage (category 3)."
 												],
 												[
 													"2",
@@ -700,7 +700,7 @@
 												],
 												[
 													"6",
-													"Hypnotic Display {@recharge 5}. As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within {@imperial 15 feet} of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours."
+													"Hypnotic Display {@recharge 5}. As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours."
 												],
 												[
 													"7",
@@ -750,7 +750,7 @@
 												],
 												[
 													"7",
-													"Leaping Legs. With or without a running start, the krasis's long jump is {@imperial 20 feet} (category 1), {@imperial 30 feet} (category 2), or {@imperial 40 feet} (category 3). Its high jump is {@imperial 10 feet} (category 1), {@imperial 20 feet} (category 2), or {@imperial 30 feet} (category 3)."
+													"Leaping Legs. With or without a running start, the krasis's long jump is 20 feet (category 1), 30 feet (category 2), or 40 feet (category 3). Its high jump is 10 feet (category 1), 20 feet (category 2), or 30 feet (category 3)."
 												],
 												[
 													"8",
@@ -813,7 +813,7 @@
 											"rows": [
 												[
 													"1",
-													"Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within {@imperial 5 feet} of it takes 2 ({@damage 1d4}) acid damage (category 1), 4 ({@damage 1d8}) acid damage (category 2), or 6 ({@damage 1d12}) acid damage (category 3)."
+													"Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within 5 feet of it takes 2 ({@damage 1d4}) acid damage (category 1), 4 ({@damage 1d8}) acid damage (category 2), or 6 ({@damage 1d12}) acid damage (category 3)."
 												],
 												[
 													"2",
@@ -833,7 +833,7 @@
 												],
 												[
 													"6",
-													"Hypnotic Display {@recharge 5}. As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within {@imperial 15 feet} of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours."
+													"Hypnotic Display {@recharge 5}. As an action, the krasis creates mesmerizing colors and shapes around itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours."
 												],
 												[
 													"7",
@@ -883,7 +883,7 @@
 												],
 												[
 													"7",
-													"Leaping Legs. With or without a running start, the krasis's long jump is {@imperial 20 feet} (category 1), {@imperial 30 feet} (category 2), or {@imperial 40 feet} (category 3). Its high jump is {@imperial 10 feet} (category 1), {@imperial 20 feet} (category 2), or {@imperial 30 feet} (category 3)."
+													"Leaping Legs. With or without a running start, the krasis's long jump is 20 feet (category 1), 30 feet (category 2), or 40 feet (category 3). Its high jump is 10 feet (category 1), 20 feet (category 2), or 30 feet (category 3)."
 												],
 												[
 													"8",
@@ -1427,7 +1427,7 @@
 											"rows": [
 												[
 													"1",
-													"Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within {@imperial 10 feet} of it. The target must succeed on a Dexterity saving throw or be {@condition grappled} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target."
+													"Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be {@condition grappled} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target."
 												],
 												[
 													"2",
@@ -2791,7 +2791,7 @@
 											"rows": [
 												[
 													"1",
-													"Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within {@imperial 10 feet} of it. The target must succeed on a Dexterity saving throw or be {@condition grappled} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target."
+													"Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be {@condition grappled} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target."
 												],
 												[
 													"2",
@@ -2987,7 +2987,7 @@
 											"rows": [
 												[
 													"1",
-													"Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within {@imperial 10 feet} of it. The target must succeed on a Dexterity saving throw or be {@condition grappled} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target."
+													"Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror. As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be {@condition grappled} by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target."
 												],
 												[
 													"2",

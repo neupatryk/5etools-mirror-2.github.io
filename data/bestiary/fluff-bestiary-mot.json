@@ -1284,7 +1284,7 @@
 												"type": "entries",
 												"name": "Bull Horns",
 												"entries": [
-													"If the chimera moves at least {@imperial 20 feet} straight toward a target and then hits it with a head attack on the same turn, the target takes an extra 7 ({@dice 2d6}) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
+													"If the chimera moves at least 20 feet straight toward a target and then hits it with a head attack on the same turn, the target takes an extra 7 ({@dice 2d6}) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
 												]
 											}
 										],
@@ -1338,7 +1338,7 @@
 												"type": "entries",
 												"name": "Lightning Breath {@recharge 5}",
 												"entries": [
-													"The chimera exhales lightning in a 60-foot line that is {@imperial 5 feet} wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 36 ({@dice 8d8}) lightning damage on a failed save, or half as much damage on a successful one."
+													"The chimera exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 36 ({@dice 8d8}) lightning damage on a failed save, or half as much damage on a successful one."
 												]
 											}
 										],
@@ -1348,7 +1348,7 @@
 												"type": "entries",
 												"name": "Tidal Wave Breath {@recharge 5}",
 												"entries": [
-													"The chimera has an aquatic creature's head that exhales a torrent of acidic water in a 60-foot line that is {@imperial 5 feet} wide. Each creature in the line must make a DC 15 Dexterity saving throw. On failed save, a creature takes 27 ({@dice 5d10}) acid damage and is knocked prone. On a successful save, it takes half as much damage and isn't knocked prone."
+													"The chimera has an aquatic creature's head that exhales a torrent of acidic water in a 60-foot line that is 5 feet wide. Each creature in the line must make a DC 15 Dexterity saving throw. On failed save, a creature takes 27 ({@dice 5d10}) acid damage and is knocked prone. On a successful save, it takes half as much damage and isn't knocked prone."
 												]
 											}
 										],
@@ -1412,7 +1412,7 @@
 												"type": "entries",
 												"name": "Shark Tail",
 												"entries": [
-													"The chimera's tail is a large fin. When the chimera hits a creature with its tail, the creature is also pushed up to {@imperial 10 feet} away."
+													"The chimera's tail is a large fin. When the chimera hits a creature with its tail, the creature is also pushed up to 10 feet away."
 												]
 											}
 										],

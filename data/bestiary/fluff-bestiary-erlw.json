@@ -1638,7 +1638,7 @@
 											"rows": [
 												[
 													"1",
-													"Bestow Luck (1/Day). As a bonus action, the animal chooses one creature it can see within {@imperial 30 feet} of it. The next ability check, attack roll, or saving throw the target makes in the next hour has advantage."
+													"Bestow Luck (1/Day). As a bonus action, the animal chooses one creature it can see within 30 feet of it. The next ability check, attack roll, or saving throw the target makes in the next hour has advantage."
 												],
 												[
 													"2",
@@ -1650,7 +1650,7 @@
 												],
 												[
 													"4",
-													"Lie Detector. The animal knows when a creature within {@imperial 15 feet} of it tells a lie."
+													"Lie Detector. The animal knows when a creature within 15 feet of it tells a lie."
 												],
 												[
 													"5",
@@ -1658,7 +1658,7 @@
 												],
 												[
 													"6",
-													"Fey Step (1/Day). The animal, along with anything it is wearing or carrying, teleports up to {@imperial 30 feet} to an unoccupied space it can see."
+													"Fey Step (1/Day). The animal, along with anything it is wearing or carrying, teleports up to 30 feet to an unoccupied space it can see."
 												],
 												[
 													"7",
