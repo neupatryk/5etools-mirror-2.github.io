@@ -29,9 +29,10 @@ const generateWeightMeasuresForJson = (path) => {
 	};
 
 	const prepareWeightMeasuresTags = (value) => {
-		const unitGetter = "(?<unit>ft\\.|mi\\.|foot\\b|mile\\b|feet\\b|miles\\b)";
 		const numberGetter = "(?<value>(((\\d+,)*\\d+)(-|/))?((\\d+,)*\\d+))";
-		const getWmTagsRegex = new RegExp(`${numberGetter}(?<delimiter>[\\s-])${unitGetter}`, "gim");
+		const delimiterGetter = "(?<delimiter>[\\s-])";
+		const unitGetter = "(?<unit>ft\\.|mi\\.|foot\\b|mile\\b|feet\\b|miles\\b)";
+		const getWmTagsRegex = new RegExp(`${numberGetter}${delimiterGetter}${unitGetter}`, "gim");
 
 		return value.replace(getWmTagsRegex, (...match) => {
 			const { value, delimiter } = match.last();
