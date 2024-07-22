@@ -54,3 +54,8 @@ const generateWeightMeasuresForJson = (path) => {
 
 	fs.writeFileSync(path, CleanUtil.getCleanJson(fileContent));
 };
+
+// todo handle for other data types
+ut.listFiles({ dir: "./data/bestiary" })
+	.filter((file) => file.endsWith(".json"))
+	.forEach(generateWeightMeasuresForJson);
