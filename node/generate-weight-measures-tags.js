@@ -14,15 +14,15 @@ const generateWeightMeasuresForJson = (path) => {
 			case "ft.":
 				return ["ft", ""];
 			case "foot":
-				return ["foot", "|s"];
+				return ["ft", "s"];
 			case "feet":
-				return ["ft", "|p"];
+				return ["ft", "p"];
 			case "mi.":
 				return ["mi", ""];
 			case "mile":
-				return ["mi", "|s"];
+				return ["mi", "s"];
 			case "miles":
-				return ["mi", "|p"];
+				return ["mi", "p"];
 			default:
 				throw new Error(`Unhandled weight and measure unit: ${unit}`);
 		}
@@ -31,14 +31,16 @@ const generateWeightMeasuresForJson = (path) => {
 	const prepareWeightMeasuresTags = (value) => {
 		const unitGetter = "(?<unit>ft\\.|mi\\.|foot\\b|mile\\b|feet\\b|miles\\b)";
 		const numberGetter = "(?<value>(((\\d+,)*\\d+)(-|/))?((\\d+,)*\\d+))";
-
-		const getWmTagsRegex = new RegExp(`${numberGetter}\\s${unitGetter}`, "gim");
+		const getWmTagsRegex = new RegExp(`${numberGetter}(?<delimiter>[\\s-])${unitGetter}`, "gim");
 
 		return value.replace(getWmTagsRegex, (...match) => {
-			const { value } = match.last();
-			const [unit, modifier] = parseMatch(match.last().unit);
+			const { value, delimiter } = match.last();
+			const [unit, unitFlags] = parseMatch(match.last().unit);
 
-			return `{@wm ${value}|${unit}${modifier}}`;
+			const flagsList = [unitFlags, delimiter !== " " ? "d" : ""].join("");
+			const flags = flagsList !== "" ? `|${flagsList}` : "";
+
+			return `{@wm ${value}|${unit}${flags}}`;
 		});
 	};
 
