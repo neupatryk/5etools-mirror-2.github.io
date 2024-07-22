@@ -252,17 +252,17 @@ Parser.getAbilityModifier = function (abilityScore) {
 	return `${modifier}`;
 };
 
-Parser.getSpeedString = (ent, {isMetric = VetoolsConfig.get("styleSwitcher", "isMetric"), isSkipZeroWalk = false} = {}) => {
+Parser.getSpeedString = (ent, { isMetric = null, isSkipZeroWalk = false } = {}) => {
+	isMetric ??= VetoolsConfig.get("styleSwitcher", "isMetric");
+
 	if (ent.speed == null) return "\u2014";
 
-	const unit = isMetric ? Parser.metric.getMetricUnit({originalUnit: "ft.", isShortForm: true}) : "ft.";
+	const unit = isMetric ? Parser.metric.getMetricUnit({ originalUnit: "ft.", isShortForm: true }) : "ft.";
 	if (typeof ent.speed === "object") {
 		const stack = [];
 		let joiner = ", ";
 
-		Parser.SPEED_MODES
-			.filter(mode => !ent.speed.hidden?.includes(mode))
-			.forEach(mode => Parser._getSpeedString_addSpeedMode({ent, prop: mode, stack, isMetric, isSkipZeroWalk, unit}));
+		Parser.SPEED_MODES.filter((mode) => !ent.speed.hidden?.includes(mode)).forEach((mode) => Parser._getSpeedString_addSpeedMode({ ent, prop: mode, stack, isMetric, isSkipZeroWalk, unit }));
 
 		if (ent.speed.choose && !ent.speed.hidden?.includes("choose")) {
 			joiner = "; ";
@@ -272,8 +272,7 @@ Parser.getSpeedString = (ent, {isMetric = VetoolsConfig.get("styleSwitcher", "is
 		return stack.join(joiner) + (ent.speed.note ? ` ${ent.speed.note}` : "");
 	}
 
-	return (isMetric ? Parser.metric.getMetricNumber({originalValue: ent.speed, originalUnit: Parser.UNT_FEET}) : ent.speed)
-		+ (ent.speed === "Varies" ? "" : ` ${unit} `);
+	return (isMetric ? Parser.metric.getMetricNumber({ originalValue: ent.speed, originalUnit: Parser.UNT_FEET }) : ent.speed) + (ent.speed === "Varies" ? "" : ` ${unit} `);
 };
 Parser._getSpeedString_addSpeedMode = ({ent, prop, stack, isMetric, isSkipZeroWalk, unit}) => {
 	if (ent.speed[prop] || (!isSkipZeroWalk && prop === "walk")) Parser._getSpeedString_addSpeed({prop, speed: ent.speed[prop] || 0, isMetric, unit, stack});

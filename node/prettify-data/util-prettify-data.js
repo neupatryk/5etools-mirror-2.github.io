@@ -4,27 +4,7 @@ import "../../js/parser.js";
 import "../../js/utils.js";
 import "../../js/utils-proporder.js";
 
-export const FILE_BLOCKLIST = new Set([
-	"loot.json",
-	"msbcr.json",
-	"monsterfeatures.json",
-	"index.json",
-	"life.json",
-	"makecards.json",
-	"renderdemo.json",
-	"makebrew-creature.json",
-	"sources.json",
-	"fluff-index.json",
-	"changelog.json",
-
-	"index-meta.json",
-	"index-props.json",
-	"index-sources.json",
-	"index-timestamps.json",
-
-	"package.json",
-	"package-lock.json",
-]);
+const FILE_BLOCKLIST = new Set(["loot.json", "msbcr.json", "monsterfeatures.json", "index.json", "life.json", "makecards.json", "renderdemo.json", "makebrew-creature.json", "sources.json", "fluff-index.json", "changelog.json", "index-meta.json", "index-props.json", "index-sources.json", "index-timestamps.json", "package.json", "package-lock.json"]);
 
 const _logUnhandledProps = ({unhandledKeys}) => {
 	if (!Object.keys(unhandledKeys).length) return;
