@@ -13,6 +13,8 @@ const numberGetter = "(?<value>(((\\d+,)*\\d+)(-|/))?((\\d+,)*\\d+))";
 const delimiterGetter = "(?<delimiter>[\\s-])";
 // match unit only of it is whole word
 const unitGetter = "(?<unit>ft\\.|mi\\.|foot\\b|mile\\b|feet\\b|miles\\b)";
+// will exclude matches that are inside other tags
+const tagOmit = "(?![^{]*})";
 
 // todo parse inches and weights
 const generateWeightMeasuresForJson = (path) => {
@@ -47,7 +49,7 @@ const generateWeightMeasuresForJson = (path) => {
 	 * s = will force single form of unit even when value is not equal to 1 // 10 foot
 	 */
 	const prepareWeightMeasuresTags = (value) => {
-		const getWmTagsRegex = new RegExp(`${numberGetter}${delimiterGetter}${unitGetter}`, "gim");
+		const getWmTagsRegex = new RegExp(`${numberGetter}${delimiterGetter}${unitGetter}${tagOmit}`, "gim");
 
 		return value.replace(getWmTagsRegex, (...match) => {
 			const { value, delimiter } = match.last();
