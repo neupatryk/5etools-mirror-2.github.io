@@ -1786,49 +1786,46 @@ globalThis.Renderer = function () {
 				break;
 			}
 			case "@wm": {
-				const [value, originalUnit, flags = ""] = Renderer.splitTagByPipe(text);
+				const [value, originalUnitValue = "", flags = ""] = Renderer.splitTagByPipe(text);
+				const originalUnit = originalUnitValue || "ft";
 
 				const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
 
-				const isPluralFlag = flags.includes("p");
-				const isSingularFlag = flags.includes("s");
+				const isForceSingularFlag = flags.includes("s");
+				const isVerboseFlag = flags.includes("v");
 				const delimiter = flags.includes("d") ? "-" : " ";
 
 				if (!isMetric) {
-					const getLongUnit = (isPlural, isSingular) => {
+					const isPlural = !isForceSingularFlag && value !== "1";
+
+					const getLongUnit = () => {
 						switch (originalUnit) {
 							case "ft": {
+								if (!isVerboseFlag) return "ft.";
 								if (isPlural) return "feet";
-								if (isSingular) return "foot";
-								return "ft.";
+								return "foot";
 							}
 							case "mi": {
+								if (!isVerboseFlag) return "mi.";
 								if (isPlural) return "miles";
-								if (isSingular) return "mile";
-								return "mi.";
+								return "mile";
 							}
 							default: throw new Error(`Unhandled unit form: ${originalUnit}`);
 						}
 					};
 
-					const longUnit = getLongUnit(isPluralFlag, isSingularFlag);
+					textStack[0] += `${value}${delimiter}${getLongUnit()}`;
+					break;
+				}
 
-					textStack[0] += `${value}${delimiter}${longUnit}`;
-						break;
-					}
-
-				const isShortForm = !isSingularFlag && !isPluralFlag;
-
-				let isPlural;
 				const parsedValue = value.replace(/,/g, "").replace(/(\d+)(?:(\D)(\d+))?/gm, (_, v1, valueDelimiter, v2) => {
 					const preparedValue = Parser.metric.getMetricNumber({ originalValue: v1, originalUnit });
-					isPlural = !!valueDelimiter || v1 !== 1;
-
 					if (!valueDelimiter) return preparedValue;
 					return `${preparedValue}${valueDelimiter}${Parser.metric.getMetricNumber({ originalValue: v2, originalUnit })}`;
 				});
 
-				const longUnit = Parser.metric.getMetricUnit({ originalUnit, isShortForm, isPlural });
+				const isPlural = !isForceSingularFlag && parsedValue !== "1";
+				const longUnit = Parser.metric.getMetricUnit({ originalUnit, isShortForm: !isVerboseFlag, isPlural });
 
 				textStack[0] += `${parsedValue}${delimiter}${longUnit}`;
 				break;
