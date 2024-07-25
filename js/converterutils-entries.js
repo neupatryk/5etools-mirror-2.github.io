@@ -43,6 +43,7 @@ class TagJsons {
 							obj = TableTag.tryRun(obj);
 							obj = TrapTag.tryRun(obj);
 							obj = HazardTag.tryRun(obj);
+							obj = WeightMeasureTag.tryRun(obj);
 							obj = ChanceTag.tryRun(obj);
 							obj = DiceConvert.getTaggedEntry(obj);
 							obj = QuickrefTag.tryRun(obj);
@@ -389,6 +390,80 @@ class HazardTag {
 	}
 }
 HazardTag._RE_HAZARD_SEE = /\b(High Altitude|Brown Mold|Green Slime|Webs|Yellow Mold|Extreme Cold|Extreme Heat|Heavy Precipitation|Strong Wind|Desecrated Ground|Frigid Water|Quicksand|Razorvine|Slippery Ice|Thin Ice)( \(see)/gi;
+
+class WeightMeasureTag {
+	static _WALKER = MiscUtil.getWalker({
+		keyBlocklist: new Set([...TagJsons.WALKER_KEY_BLOCKLIST,
+			"senses", "otherSources", "alignment", "traitTags", "senseTags", "actionTags", "languageTags",
+			"damageTags", "miscTags", "damageTagsLegendary", "conditionInflict", "conditionInflictLegendary",
+			"savingThrowForced", "savingThrowForcedLegendary", "hp"]),
+	});
+
+	/**
+	 * Flags info:
+	 * v = will extend unit to full name // ft = feet|foot
+	 * d = will add dash between value and unit // 10-feet
+	 * s = will force single form of unit even when value is not equal to 1 // 10 foot
+	 */
+	static tryRun (it) {
+		return this._WALKER.walk(it, {
+			string: (str) => {
+				const ptrStack = { _: "" };
+				TaggerUtils.walkerStringHandler(["@wm"], ptrStack, 0, 0, str, {
+					fnTag: this._fnTag,
+				});
+				return ptrStack._;
+			},
+		});
+	}
+
+	static _fnTag (strMod) {
+		const parseMatch = (unit, isValueOne) => {
+			switch (unit) {
+				case "ft.":
+					return ["", ""];
+				case "foot":
+					if (!isValueOne) return ["", "vs"];
+					return ["", "v"];
+				case "feet":
+					return ["", "v"];
+				case "mi.":
+					return ["mi", ""];
+				case "mile":
+					if (!isValueOne) return ["mi", "vs"];
+					return ["mi", "v"];
+				case "miles":
+					return ["mi", "v"];
+				default:
+					throw new Error(`Unhandled weight and measure unit: ${unit}`);
+			}
+		};
+
+		const getWmTagsRegex = new RegExp(`${WeightMeasureTag._RE_NUMBER_SEE}${WeightMeasureTag._RE_DELIMITER_SEE}${WeightMeasureTag._RE_UNIT_SEE}`, "gim");
+
+		return strMod.replace(getWmTagsRegex, (...match) => {
+			const { value, delimiter } = match.last();
+			const isValueOne = value === "1";
+
+			const [unit, unitFlags] = parseMatch(match.last().unit, isValueOne);
+			let flags = unitFlags;
+
+			if (delimiter !== " ") flags += "d";
+
+			let tagStack = `{@wm ${value}`;
+			if (unit.length || flags.length) tagStack += "|";
+			tagStack += `${unit}`;
+			if (flags.length) tagStack += `|${flags}`;
+			return `${tagStack}}`;
+		});
+	}
+}
+// match 1 5 30 120 3000 1,200 300/1,200 50-90
+WeightMeasureTag._RE_NUMBER_SEE = "(?<value>(((\\d+,)*\\d+)(-|/))?((\\d+,)*\\d+))";
+// match " " or -
+WeightMeasureTag._RE_DELIMITER_SEE = "(?<delimiter>[\\s-])";
+// match unit only of it is whole word
+WeightMeasureTag._RE_UNIT_SEE = "(?<unit>ft\\.|mi\\.|foot\\b|mile\\b|feet\\b|miles\\b)";
 
 class CreatureTag {
 	/**

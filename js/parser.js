@@ -1248,6 +1248,7 @@ Parser.spRangeToFull._getAreaStyleString = function (range) {
 };
 
 Parser.getSingletonUnit = function (unit, isShort) {
+	// todo parse spells
 	switch (unit) {
 		case Parser.UNT_FEET:
 			return isShort ? "ft." : "foot";
