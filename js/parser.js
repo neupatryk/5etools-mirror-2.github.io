@@ -1167,9 +1167,11 @@ Parser.spRangeTypeToIcon = function (range) {
 };
 
 Parser.spRangeToShortHtml = function (range) {
+	const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
+
 	switch (range.type) {
 		case Parser.RNG_SPECIAL: return `<span class="fas fa-fw ${Parser.spRangeTypeToIcon(range.type)} help-subtle" title="Special"></span>`;
-		case Parser.RNG_POINT: return Parser.spRangeToShortHtml._renderPoint(range);
+		case Parser.RNG_POINT: return Parser.spRangeToShortHtml._renderPoint(range, isMetric);
 		case Parser.RNG_LINE:
 		case Parser.RNG_CUBE:
 		case Parser.RNG_CONE:
@@ -1177,10 +1179,10 @@ Parser.spRangeToShortHtml = function (range) {
 		case Parser.RNG_SPHERE:
 		case Parser.RNG_HEMISPHERE:
 		case Parser.RNG_CYLINDER:
-			return Parser.spRangeToShortHtml._renderArea(range);
+			return Parser.spRangeToShortHtml._renderArea(range, isMetric);
 	}
 };
-Parser.spRangeToShortHtml._renderPoint = function (range) {
+Parser.spRangeToShortHtml._renderPoint = function (range, isMetric) {
 	const dist = range.distance;
 	switch (dist.type) {
 		case Parser.RNG_SELF:
@@ -1192,22 +1194,28 @@ Parser.spRangeToShortHtml._renderPoint = function (range) {
 		case Parser.UNT_FEET:
 		case Parser.UNT_YARDS:
 		case Parser.UNT_MILES:
-		default:
-			return `${dist.amount} <span class="ve-small">${Parser.getSingletonUnit(dist.type, true)}</span>`;
+		default:{
+			const amount = isMetric ? Parser.metric.getMetricNumber({ originalValue: dist.amount, originalUnit: dist.type }) : dist.amount;
+			return `${amount} <span class="ve-small">${Parser.getSingletonUnit(dist.type, true, isMetric)}</span>`;
+		}
 	}
 };
-Parser.spRangeToShortHtml._renderArea = function (range) {
+Parser.spRangeToShortHtml._renderArea = function (range, isMetric) {
 	const size = range.distance;
-	return `<span class="fas fa-fw ${Parser.spRangeTypeToIcon(Parser.RNG_SELF)} help-subtle" title="Self"></span> ${size.amount}<span class="ve-small">-${Parser.getSingletonUnit(size.type, true)}</span> ${Parser.spRangeToShortHtml._getAreaStyleString(range)}`;
+	const amount = isMetric ? Parser.metric.getMetricNumber({ originalValue: size.amount, originalUnit: size.type }) : size.amount;
+
+	return `<span class="fas fa-fw ${Parser.spRangeTypeToIcon(Parser.RNG_SELF)} help-subtle" title="Self"></span> ${amount}<span class="ve-small">-${Parser.getSingletonUnit(size.type, true, isMetric)}</span> ${Parser.spRangeToShortHtml._getAreaStyleString(range)}`;
 };
 Parser.spRangeToShortHtml._getAreaStyleString = function (range) {
 	return `<span class="fas fa-fw ${Parser.spRangeTypeToIcon(range.type)} help-subtle" title="${Parser.spRangeTypeToFull(range.type)}"></span>`;
 };
 
 Parser.spRangeToFull = function (range) {
+	const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
+
 	switch (range.type) {
 		case Parser.RNG_SPECIAL: return Parser.spRangeTypeToFull(range.type);
-		case Parser.RNG_POINT: return Parser.spRangeToFull._renderPoint(range);
+		case Parser.RNG_POINT: return Parser.spRangeToFull._renderPoint(range, isMetric);
 		case Parser.RNG_LINE:
 		case Parser.RNG_CUBE:
 		case Parser.RNG_CONE:
@@ -1215,10 +1223,10 @@ Parser.spRangeToFull = function (range) {
 		case Parser.RNG_SPHERE:
 		case Parser.RNG_HEMISPHERE:
 		case Parser.RNG_CYLINDER:
-			return Parser.spRangeToFull._renderArea(range);
+			return Parser.spRangeToFull._renderArea(range, isMetric);
 	}
 };
-Parser.spRangeToFull._renderPoint = function (range) {
+Parser.spRangeToFull._renderPoint = function (range, isMetric) {
 	const dist = range.distance;
 	switch (dist.type) {
 		case Parser.RNG_SELF:
@@ -1230,13 +1238,20 @@ Parser.spRangeToFull._renderPoint = function (range) {
 		case Parser.UNT_FEET:
 		case Parser.UNT_YARDS:
 		case Parser.UNT_MILES:
-		default:
-			return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : dist.type}`;
+		default:{
+			const type = isMetric ? Parser.metric.getMetricUnit({ originalUnit: dist.type, isShortForm: false, isPlural: true }) : dist.type;
+			const amount = isMetric ? Parser.metric.getMetricNumber({ originalValue: dist.amount, originalUnit: dist.type }) : dist.amount;
+
+			return `${amount} ${amount === 1 ? Parser.getSingletonUnit(dist.type, false, isMetric) : type}`;
+		}
 	}
 };
-Parser.spRangeToFull._renderArea = function (range) {
+Parser.spRangeToFull._renderArea = function (range, isMetric) {
 	const size = range.distance;
-	return `Self (${size.amount}-${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === Parser.RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-high` : ""} cylinder` : ""})`;
+	const amount = isMetric ? Parser.metric.getMetricNumber({ originalValue: size.amount, originalUnit: size.type }) : size.amount;
+	const amountSecondary = isMetric ? Parser.metric.getMetricNumber({ originalValue: size.amountSecondary, originalUnit: size.type }) : size.amountSecondary;
+
+	return `Self (${amount}-${Parser.getSingletonUnit(size.type, false, isMetric)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === Parser.RNG_CYLINDER ? `${amountSecondary != null && size.typeSecondary != null ? `, ${amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary, false, isMetric)}-high` : ""} cylinder` : ""})`;
 };
 Parser.spRangeToFull._getAreaStyleString = function (range) {
 	switch (range.type) {
@@ -1247,7 +1262,28 @@ Parser.spRangeToFull._getAreaStyleString = function (range) {
 	}
 };
 
-Parser.getSingletonUnit = function (unit, isShort) {
+Parser.getSingletonUnit = function (unit, isShort, isMetric) {
+	const getDefaultUnit = () => {
+		const fromPrerelease = Parser._getSingletonUnit_prereleaseBrew({unit, isShort, brewUtil: PrereleaseUtil});
+		if (fromPrerelease) return fromPrerelease;
+
+		const fromBrew = Parser._getSingletonUnit_prereleaseBrew({unit, isShort, brewUtil: BrewUtil2});
+		if (fromBrew) return fromBrew;
+
+		if (unit.charAt(unit.length - 1) === "s") return unit.slice(0, -1);
+		return unit;
+	};
+
+	if (isMetric) {
+		switch (unit) {
+			case Parser.UNT_FEET:
+			case Parser.UNT_YARDS:
+			case Parser.UNT_MILES:
+				return Parser.metric.getMetricUnit({ originalUnit: unit, isShortForm: isShort, isPlural: false });
+			default: return getDefaultUnit();
+		}
+	}
+
 	// todo parse spells
 	switch (unit) {
 		case Parser.UNT_FEET:
@@ -1256,16 +1292,7 @@ Parser.getSingletonUnit = function (unit, isShort) {
 			return isShort ? "yd." : "yard";
 		case Parser.UNT_MILES:
 			return isShort ? "mi." : "mile";
-		default: {
-			const fromPrerelease = Parser._getSingletonUnit_prereleaseBrew({unit, isShort, brewUtil: PrereleaseUtil});
-			if (fromPrerelease) return fromPrerelease;
-
-			const fromBrew = Parser._getSingletonUnit_prereleaseBrew({unit, isShort, brewUtil: BrewUtil2});
-			if (fromBrew) return fromBrew;
-
-			if (unit.charAt(unit.length - 1) === "s") return unit.slice(0, -1);
-			return unit;
-		}
+		default: return getDefaultUnit();
 	}
 };
 
