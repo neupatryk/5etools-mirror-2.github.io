@@ -1826,7 +1826,7 @@ globalThis.Renderer = function () {
 				const parsedValue = value.replace(/,/g, "").replace(/(\d+)(?:(\D+)(\d+))?/gm, (_, v1, valueDelimiter, v2) => {
 					const preparedValue = Parser.metric.getMetricNumber({ originalValue: v1, originalUnit, toFixed: 3 });
 					if (!valueDelimiter) return preparedValue;
-					return `${preparedValue}${valueDelimiter}${Parser.metric.getMetricNumber({ originalValue: v2, originalUnit })}`;
+					return `${preparedValue}${valueDelimiter}${Parser.metric.getMetricNumber({ originalValue: v2, originalUnit, toFixed: 3 })}`;
 				});
 
 				const isPlural = !isForceSingularFlag && parsedValue !== "1";
