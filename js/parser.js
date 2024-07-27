@@ -845,17 +845,25 @@ Parser.getDisplayCurrency = function (currency, {isDisplayEmpty = false} = {}) {
 
 Parser.itemWeightToFull = function (item, isShortForm) {
 	if (item.weight) {
-		// Handle pure integers
-		if (Math.round(item.weight) === item.weight) return `${item.weight} lb.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
+		const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
+		const weightNote = (item.weightNote ? ` ${item.weightNote}` : "");
+		let unit = isMetric ? "kg" : "lb.";
 
-		const integerPart = Math.floor(item.weight);
+		// Handle pure integers
+		if (Math.round(item._fWeight) === item._fWeight) return `${item._fWeight} ${unit}${weightNote}`;
+
+		const integerPart = Math.floor(item._fWeight);
 
 		// Attempt to render the amount as (a number +) a vulgar
-		const vulgarGlyph = Parser.numberToVulgar(item.weight - integerPart, {isFallbackOnFractional: false});
-		if (vulgarGlyph) return `${integerPart || ""}${vulgarGlyph} lb.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
+		const vulgarGlyph = Parser.numberToVulgar(item._fWeight - integerPart, {isFallbackOnFractional: false});
+		if (vulgarGlyph) return `${integerPart || ""}${vulgarGlyph} ${unit}${weightNote}`;
 
+		const lessThanOne = item._fWeight < 1;
+		if (isMetric) {
+			return `${(lessThanOne ? item._fWeight * 1000 : item._fWeight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${lessThanOne ? "g" : "kg"}${weightNote}`;
+		}
 		// Fall back on decimal pounds or ounces
-		return `${(item.weight < 1 ? item.weight * 16 : item.weight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${item.weight < 1 ? "oz" : "lb"}.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
+		return `${(lessThanOne ? item._fWeight * 16 : item._fWeight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${lessThanOne ? "oz" : "lb"}.${weightNote}`;
 	}
 	if (item.weightMult) return isShortForm ? `×${item.weightMult}` : `base weight ×${item.weightMult}`;
 	return "";
