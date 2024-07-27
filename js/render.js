@@ -1810,6 +1810,11 @@ globalThis.Renderer = function () {
 								if (isPlural) return "miles";
 								return "mile";
 							}
+							case "lb": {
+								if (!isVerboseFlag) return "lb";
+								if (isPlural) return "pounds";
+								return "pound";
+							}
 							default: throw new Error(`Unhandled unit form: ${originalUnit}`);
 						}
 					};
@@ -1818,8 +1823,8 @@ globalThis.Renderer = function () {
 					break;
 				}
 
-				const parsedValue = value.replace(/,/g, "").replace(/(\d+)(?:(\D)(\d+))?/gm, (_, v1, valueDelimiter, v2) => {
-					const preparedValue = Parser.metric.getMetricNumber({ originalValue: v1, originalUnit });
+				const parsedValue = value.replace(/,/g, "").replace(/(\d+)(?:(\D+)(\d+))?/gm, (_, v1, valueDelimiter, v2) => {
+					const preparedValue = Parser.metric.getMetricNumber({ originalValue: v1, originalUnit, toFixed: 3 });
 					if (!valueDelimiter) return preparedValue;
 					return `${preparedValue}${valueDelimiter}${Parser.metric.getMetricNumber({ originalValue: v2, originalUnit })}`;
 				});

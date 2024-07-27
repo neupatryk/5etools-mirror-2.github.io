@@ -434,6 +434,11 @@ class WeightMeasureTag {
 					return ["mi", "v"];
 				case "miles":
 					return ["mi", "v"];
+				case "lb":
+					return ["lb", ""];
+				case "pound":
+				case "pounds":
+					return ["lb", "v"];
 				default:
 					throw new Error(`Unhandled weight and measure unit: ${unit}`);
 			}
@@ -446,6 +451,11 @@ class WeightMeasureTag {
 			const isValueOne = value === "1";
 
 			const [unit, unitFlags] = parseMatch(match.last().unit, isValueOne);
+
+			// todo handle cases like 1/4 pound
+			// they are not two numbers after slash but fraction of one
+			if ((unit === "lb" || unit === "mi") && value.includes("/")) return match[0];
+
 			let flags = unitFlags;
 
 			if (delimiter !== " ") flags += "d";
@@ -459,11 +469,11 @@ class WeightMeasureTag {
 	}
 }
 // match 1 5 30 120 3000 1,200 300/1,200 50-90
-WeightMeasureTag._RE_NUMBER_SEE = "(?<value>(((\\d+,)*\\d+)(-|/))?((\\d+,)*\\d+))";
+WeightMeasureTag._RE_NUMBER_SEE = "(?<value>(((\\d+,)*\\d+)(-|/|\\s(and|or|to)\\s))?((\\d+,)*\\d+))";
 // match " " or -
 WeightMeasureTag._RE_DELIMITER_SEE = "(?<delimiter>[\\s-])";
 // match unit only of it is whole word
-WeightMeasureTag._RE_UNIT_SEE = "(?<unit>ft\\.|mi\\.|foot\\b|mile\\b|feet\\b|miles\\b)";
+WeightMeasureTag._RE_UNIT_SEE = "(?<unit>ft\\.|mi\\.|lb(?=[\\.s])|foot\\b|feet\\b|mile[s]?\\b|pound[s]?\\b)";
 
 class CreatureTag {
 	/**
