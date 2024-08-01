@@ -96,12 +96,7 @@ class PageFilterBestiary extends PageFilterBase {
 			displayFn: Parser.sizeAbvToFull,
 			itemSortFn: null,
 		});
-		if (VetoolsConfig.get("styleSwitcher", "isMetric")) {
-			this._speedFilter = new RangeFilter({header: "Speed", min: 9, max: 9, suffix: " m"});
-		} else {
-			this._speedFilter = new RangeFilter({header: "Speed", min: 30, max: 30, suffix: " ft"});
-		}
-
+		this._speedFilter = new RangeFilter({header: "Speed", min: 30, max: 30, suffix: " ft"});
 		this._speedTypeFilter = new Filter({header: "Speed Type", items: [...Parser.SPEED_MODES, "hover"], displayFn: StrUtil.uppercaseFirst});
 		this._strengthFilter = new RangeFilter({header: "Strength", min: 1, max: 30});
 		this._dexterityFilter = new RangeFilter({header: "Dexterity", min: 1, max: 30});
@@ -374,18 +369,15 @@ class PageFilterBestiary extends PageFilterBase {
 			return;
 		}
 
-		const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
 		if (typeof mon.speed === "number" && mon.speed > 0) {
 			mon._fSpeedType = ["walk"];
-			mon._fSpeed = isMetric ? Parser.metric.getMetricNumber({ originalValue: mon.speed, originalUnit: "ft" }) : mon.speed;
+			mon._fSpeed = mon.speed;
 			return;
 		}
 
 		mon._fSpeedType = Object.keys(mon.speed).filter(k => mon.speed[k]);
-		if (mon._fSpeedType.length) {
-			const preparedSpeed = mon._fSpeedType.map(k => mon.speed[k].number || mon.speed[k]).filter(it => !isNaN(it)).sort((a, b) => SortUtil.ascSort(b, a))[0];
-			mon._fSpeed = isMetric ? Parser.metric.getMetricNumber({ originalValue: preparedSpeed, originalUnit: "ft" }) : preparedSpeed;
-		} else mon._fSpeed = 0;
+		if (mon._fSpeedType.length) mon._fSpeed = mon._fSpeedType.map(k => mon.speed[k].number || mon.speed[k]).filter(it => !isNaN(it)).sort((a, b) => SortUtil.ascSort(b, a))[0];
+		else mon._fSpeed = 0;
 		if (mon.speed.canHover) mon._fSpeedType.push("hover");
 	}
 
