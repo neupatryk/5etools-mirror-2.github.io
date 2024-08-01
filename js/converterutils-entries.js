@@ -455,6 +455,8 @@ class WeightMeasureTag {
 				case "lb":
 					return ["lb", ""];
 				case "pound":
+					if (!isValueOne) return ["lb", "vs"];
+					return ["lb", "v"];
 				case "pounds":
 					return ["lb", "v"];
 				default:

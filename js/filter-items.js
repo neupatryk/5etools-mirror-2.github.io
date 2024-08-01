@@ -74,7 +74,14 @@ class PageFilterEquipment extends PageFilterBase {
 		});
 
 		if (VetoolsConfig.get("styleSwitcher", "isMetric")) {
-			this._weightFilter = new RangeFilter({header: "Weight", min: 0, max: 50, isAllowGreater: true, suffix: " kg"});
+			this._weightFilter = new RangeFilter({header: "Weight",
+				min: 0,
+				max: 50,
+				isAllowGreater: true,
+				suffix: " kg",
+				displayFn: (originalValue) => {
+					return Parser.metric.getMetricNumber({ originalValue, originalUnit: "lb", toFixed: 1 });
+				}});
 		} else {
 			this._weightFilter = new RangeFilter({header: "Weight", min: 0, max: 100, isAllowGreater: true, suffix: " lb."});
 		}
@@ -144,10 +151,6 @@ class PageFilterEquipment extends PageFilterBase {
 				return [name, source].join("|");
 			})
 			: null;
-
-		if (item.weight) {
-			item._fWeight = VetoolsConfig.get("styleSwitcher", "isMetric") ? Parser.metric.getMetricNumber({ originalValue: item.weight, originalUnit: "lb" }) : item.weight;
-		}
 	}
 
 	addToFilters (item, isExcluded) {
@@ -188,7 +191,7 @@ class PageFilterEquipment extends PageFilterBase {
 			it._fProperties,
 			it._category,
 			it._fValue,
-			it._fWeight,
+			it.weight,
 			it._fFocus,
 			it.dmgType,
 			it._fDamageDice,
@@ -431,7 +434,7 @@ class PageFilterItems extends PageFilterEquipment {
 			it._fAttunement,
 			it._category,
 			it._fValue,
-			it._fWeight,
+			it.weight,
 			it._fFocus,
 			it.dmgType,
 			it._fDamageDice,

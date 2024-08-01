@@ -846,24 +846,26 @@ Parser.getDisplayCurrency = function (currency, {isDisplayEmpty = false} = {}) {
 Parser.itemWeightToFull = function (item, isShortForm) {
 	if (item.weight) {
 		const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
+		const preparedWeight = isMetric ? Parser.metric.getMetricNumber({ originalValue: item.weight, originalUnit: "lb" }) : item.weight;
+
 		const weightNote = (item.weightNote ? ` ${item.weightNote}` : "");
 		let unit = isMetric ? "kg" : "lb.";
 
 		// Handle pure integers
-		if (Math.round(item._fWeight) === item._fWeight) return `${item._fWeight} ${unit}${weightNote}`;
+		if (Math.round(preparedWeight) === preparedWeight) return `${preparedWeight} ${unit}${weightNote}`;
 
-		const integerPart = Math.floor(item._fWeight);
+		const integerPart = Math.floor(preparedWeight);
 
 		// Attempt to render the amount as (a number +) a vulgar
-		const vulgarGlyph = Parser.numberToVulgar(item._fWeight - integerPart, {isFallbackOnFractional: false});
+		const vulgarGlyph = Parser.numberToVulgar(preparedWeight - integerPart, {isFallbackOnFractional: false});
 		if (vulgarGlyph) return `${integerPart || ""}${vulgarGlyph} ${unit}${weightNote}`;
 
-		const lessThanOne = item._fWeight < 1;
+		const lessThanOne = preparedWeight < 1;
 		if (isMetric) {
-			return `${(lessThanOne ? item._fWeight * 1000 : item._fWeight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${lessThanOne ? "g" : "kg"}${weightNote}`;
+			return `${(lessThanOne ? preparedWeight * 1000 : preparedWeight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${lessThanOne ? "g" : "kg"}${weightNote}`;
 		}
 		// Fall back on decimal pounds or ounces
-		return `${(lessThanOne ? item._fWeight * 16 : item._fWeight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${lessThanOne ? "oz" : "lb"}.${weightNote}`;
+		return `${(lessThanOne ? preparedWeight * 16 : preparedWeight).toLocaleString(undefined, {maximumFractionDigits: 5})} ${lessThanOne ? "oz" : "lb"}.${weightNote}`;
 	}
 	if (item.weightMult) return isShortForm ? `×${item.weightMult}` : `base weight ×${item.weightMult}`;
 	return "";
