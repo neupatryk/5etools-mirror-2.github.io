@@ -846,10 +846,15 @@ Parser.getDisplayCurrency = function (currency, {isDisplayEmpty = false} = {}) {
 Parser.itemWeightToFull = function (item, isShortForm) {
 	if (item.weight) {
 		const isMetric = VetoolsConfig.get("styleSwitcher", "isMetric");
-		const preparedWeight = isMetric ? Parser.metric.getMetricNumber({ originalValue: item.weight, originalUnit: "lb" }) : item.weight;
+		let preparedWeight = item.weight;
+		let unit = "lb.";
+
+		if (isMetric) {
+			preparedWeight = Parser.metric.getMetricNumber({ originalValue: item.weight, originalUnit: "lb" });
+			unit = "kg";
+		}
 
 		const weightNote = (item.weightNote ? ` ${item.weightNote}` : "");
-		let unit = isMetric ? "kg" : "lb.";
 
 		// Handle pure integers
 		if (Math.round(preparedWeight) === preparedWeight) return `${preparedWeight} ${unit}${weightNote}`;
