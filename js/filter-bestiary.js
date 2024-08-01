@@ -97,22 +97,14 @@ class PageFilterBestiary extends PageFilterBase {
 			itemSortFn: null,
 		});
 
-		if (VetoolsConfig.get("styleSwitcher", "isMetric")) {
-			this._speedFilter = new RangeFilter({header: "Speed",
-				min: 9,
-				max: 9,
+		const speedFilterConfig = VetoolsConfig.get("styleSwitcher", "isMetric")
+			? {
 				suffix: " m",
-				displayFn: (originalValue) => {
-					return Parser.metric.getMetricNumber({ originalValue, originalUnit: "ft", toFixed: 1 });
-				}});
-		} else {
-			this._speedFilter = new RangeFilter({header: "Speed",
-				min: 30,
-				max: 30,
-				suffix: " ft",
-			});
-		}
+				displayFn: (originalValue) => Parser.metric.getMetricNumber({ originalValue, originalUnit: "ft", toFixed: 1 }),
+			}
+			: {suffix: " ft"};
 
+		this._speedFilter = new RangeFilter({header: "Speed", min: 30, max: 30, ...speedFilterConfig});
 		this._speedTypeFilter = new Filter({header: "Speed Type", items: [...Parser.SPEED_MODES, "hover"], displayFn: StrUtil.uppercaseFirst});
 		this._strengthFilter = new RangeFilter({header: "Strength", min: 1, max: 30});
 		this._dexterityFilter = new RangeFilter({header: "Dexterity", min: 1, max: 30});
