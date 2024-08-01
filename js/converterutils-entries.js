@@ -43,7 +43,6 @@ class TagJsons {
 							obj = TableTag.tryRun(obj);
 							obj = TrapTag.tryRun(obj);
 							obj = HazardTag.tryRun(obj);
-							obj = WeightMeasureTag.tryRun(obj);
 							obj = ChanceTag.tryRun(obj);
 							obj = DiceConvert.getTaggedEntry(obj);
 							obj = QuickrefTag.tryRun(obj);
@@ -57,6 +56,8 @@ class TagJsons {
 					},
 				)._;
 			});
+
+		WeightMeasureTag.tryRun(json);
 	}
 }
 
@@ -406,8 +407,18 @@ class WeightMeasureTag {
 	 * s = will force single form of unit even when value is not equal to 1 // 10 foot
 	 */
 	static tryRun (it) {
+		const keyStack = [];
+
 		return this._WALKER.walk(it, {
+			preObject: (_, key) => keyStack.push(key),
+			postObject: () => keyStack.pop(),
+			preArray: (_, key) => keyStack.push(key),
+			posArray: () => keyStack.pop(),
+
 			string: (str) => {
+				// item group in the item array should not be parsed as they are linked to real item names
+				if (keyStack.at(-2) === "itemGroup" && keyStack.at(-1) === "items") return str;
+
 				const ptrStack = { _: "" };
 				TaggerUtils.walkerStringHandler(["@wm"], ptrStack, 0, 0, str, {
 					fnTag: this._fnTag,
@@ -418,6 +429,13 @@ class WeightMeasureTag {
 	}
 
 	static _fnTag (strMod) {
+		// match 1 5 30 120 3000 1,200 300/1,200 50-90 1 or 2 1 to 2 1 and 2
+		const RE_NUMBER_SEE = "(?<value>(((\\d+,)*\\d+)(-|/|\\s(and|or|to)\\s))?((\\d+,)*\\d+))";
+		// match " " or -
+		const RE_DELIMITER_SEE = "(?<delimiter>[\\s-])";
+		// match unit only of it is whole word
+		const RE_UNIT_SEE = "(?<unit>ft\\.|mi\\.|lb(?=[\\.s])|foot\\b|feet\\b|mile[s]?\\b|pound[s]?\\b)";
+
 		const parseMatch = (unit, isValueOne) => {
 			switch (unit) {
 				case "ft.":
@@ -444,7 +462,7 @@ class WeightMeasureTag {
 			}
 		};
 
-		const getWmTagsRegex = new RegExp(`${WeightMeasureTag._RE_NUMBER_SEE}${WeightMeasureTag._RE_DELIMITER_SEE}${WeightMeasureTag._RE_UNIT_SEE}`, "gim");
+		const getWmTagsRegex = new RegExp(`${RE_NUMBER_SEE}${RE_DELIMITER_SEE}${RE_UNIT_SEE}`, "gim");
 
 		return strMod.replace(getWmTagsRegex, (...match) => {
 			const { value, delimiter } = match.last();
@@ -468,12 +486,6 @@ class WeightMeasureTag {
 		});
 	}
 }
-// match 1 5 30 120 3000 1,200 300/1,200 50-90
-WeightMeasureTag._RE_NUMBER_SEE = "(?<value>(((\\d+,)*\\d+)(-|/|\\s(and|or|to)\\s))?((\\d+,)*\\d+))";
-// match " " or -
-WeightMeasureTag._RE_DELIMITER_SEE = "(?<delimiter>[\\s-])";
-// match unit only of it is whole word
-WeightMeasureTag._RE_UNIT_SEE = "(?<unit>ft\\.|mi\\.|lb(?=[\\.s])|foot\\b|feet\\b|mile[s]?\\b|pound[s]?\\b)";
 
 class CreatureTag {
 	/**
